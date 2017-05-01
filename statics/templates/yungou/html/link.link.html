@@ -1,0 +1,60 @@
+{wc:templates "index","header"}
+<div class="links_txt">
+	<h3><b>文字链接</b></h3>
+	<ul>
+	{wc:loop $link_size $size}	
+		<li><a href="{wc:$size['url']}" target="_blank">{wc:$size['name']}</a></li>
+	{wc:loop:end}	
+	</ul>
+</div>
+<div class="links_txt">
+	<h3><b>图片链接</b></h3>
+	<ul>
+	{wc:loop $link_img $img}	
+		<li><a href="{wc:$img['url']}" target="_blank"><img src="{G_UPLOAD_PATH}/linkimg/{wc:$img['logo']}"/></a></li>
+	{wc:loop:end}	
+	</ul>
+</div>  
+<div class="links_exp">
+	<h3 style="border: none;"><b>联系方式</b></h3>
+	<p>
+		电话：888-8888888<br>
+	</p>                 
+</div>
+<script type="text/javascript">
+	$(".yu_ff").mouseover(function(){
+	  $(".h_1yyg_eject").show();
+	})
+	$(".yu_ff").mouseout(function(){
+	  $(".h_1yyg_eject").hide();
+	})
+
+		     $("#m_all_sort").hide();
+	     $(".m_menu_all").mouseenter(function(){
+			    $(".m_all_sort").show();
+	     })
+		 $(".m_menu_all").mouseleave(function(){
+			    $(".m_all_sort").hide();
+	     })
+		 $(".m_all_sort").mouseenter(function(){
+			    $(this).show();
+	     })
+		 $(".m_all_sort").mouseleave(function(){
+			    $(this).hide();
+	     })
+	     $(function(){
+	       $(window).scroll(function() {	
+	      		
+	     		if($(window).scrollTop()>=130&&$(window).scrollTop()<=560){
+	     			$(".head_nav").addClass("fixedNav");	
+	     			$("#m_all_sort").fadeOut();
+	     		}else if($(window).scrollTop()>560){
+	     			$(".head_nav").addClass("fixedNav");
+	     			$("#m_all_sort").fadeOut();
+	     	} else if($(window).scrollTop()<130){
+	     			$(".head_nav").removeClass("fixedNav");
+	     	}
+	           });
+	     });
+</script>
+{wc:templates "index","footer"}

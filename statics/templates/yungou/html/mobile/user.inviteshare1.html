@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>分享页面得现金-{wc:$webname}触屏版</title>
+    <meta content="app-id=518966501" name="apple-itunes-app" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+
+
+
+    <meta content="telephone=no" name="format-detection" />
+
+
+
+    <link href="{G_TEMPLATES_CSS}/weixin/comm.css?v=130715" rel="stylesheet" type="text/css" />
+
+
+
+    <link href="{G_TEMPLATES_CSS}/weixin/index.css?v=141009" rel="stylesheet" type="text/css" />
+
+
+
+    <script src="{G_TEMPLATES_CSS}/weixin/jquery190.js" language="javascript" type="text/javascript"></script>
+
+
+
+    <script src="{G_TEMPLATES_JS}/mobile/jweixin.js"  language="javascript"  type="text/javascript"></script>
+
+
+
+    <script id="pageJS" data="{G_TEMPLATES_CSS}/weixin/index.js" language="javascript" type="text/javascript"></script>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+    <div class="swiper-container">
+
+
+
+        <div class="swiper-wrapper">
+
+
+
+            <div id="newbeiBox">
+
+
+
+                <ul class="slides">
+
+
+
+                    <li class="swiper-slide">
+
+
+
+                        <div class="item">
+
+
+
+                        </div>
+
+
+
+                    </li>
+
+
+
+                    <li class="swiper-slide">
+
+
+
+                        <div class="item">
+
+
+
+                        </div>
+
+
+
+                    </li>
+
+
+
+                    <li class="swiper-slide">
+
+
+
+                        <div class="item">
+
+
+
+                            <div class="indexCon">
+
+
+
+                                <a href="{G_WEB_PATH}"  class="orangeBtn">立即1元云购</a>
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+                    </li>
+
+
+
+                </ul>
+
+
+
+            </div>
+
+
+
+            <table class="index_arrow">
+
+
+
+                <tr>
+
+
+
+                    <td><a href="javascript:;" class="index_up" style="display: none;">
+
+
+
+                        <img src="{G_TEMPLATES_CSS}/weixin/up.gif" /></a></td>
+
+
+
+                </tr>
+
+
+
+                <tr>
+
+
+
+                    <td><a href="javascript:;" class="index_down" style="display: none;">
+
+
+
+                        <img src="{G_TEMPLATES_CSS}/weixin/down.gif" /></a></td>
+
+
+
+                </tr>
+
+
+
+            </table>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+   
+
+
+
+    
+
+
+
+<input id="hidPageType" type="hidden" value="-1" />
+<input id="uid" type="hidden" value="{wc:$member['uid']}">
+
+
+<script type="text/javascript">
+
+
+
+    var Base = {
+
+
+
+        head: document.getElementsByTagName("head")[0] || document.documentElement,
+
+
+
+        Myload: function (B, A) {
+
+
+
+            this.done = false;
+
+
+
+            B.onload = B.onreadystatechange = function () {
+
+
+
+                if (!this.done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
+
+
+
+                    this.done = true;
+
+
+
+                    A();
+
+
+
+                    B.onload = B.onreadystatechange = null;
+
+
+
+                    if (this.head && B.parentNode) {
+
+
+
+                        this.head.removeChild(B)
+
+
+
+                    }
+
+
+
+                }
+
+
+
+            }
+
+
+
+        },
+
+
+
+        getScript: function (A, C) {
+
+
+
+            var B = function () { };
+
+
+
+            if (C != undefined) {
+
+
+
+                B = C;
+
+
+
+            }
+
+
+
+            var D = document.createElement("script");
+
+
+
+            D.setAttribute("language", "javascript");
+
+
+
+            D.setAttribute("type", "text/javascript");
+
+
+
+            D.setAttribute("src", A);
+
+
+
+            this.head.appendChild(D);
+
+
+
+            this.Myload(D, B);
+
+
+
+        },
+
+
+
+        getStyle: function (A, B) {
+
+
+
+            var B = function () { };
+
+
+
+            if (callBack != undefined) {
+
+
+
+                B = callBack;
+
+
+
+            }
+
+
+
+            var C = document.createElement("link");
+
+
+
+            C.setAttribute("type", "text/css");
+
+
+
+            C.setAttribute("rel", "stylesheet");
+
+
+
+            C.setAttribute("href", A);
+
+
+
+            this.head.appendChild(C);
+
+
+
+            this.Myload(C, B);
+
+
+
+        }
+
+
+
+    }
+
+
+
+    function GetVerNum() {
+
+
+
+        var D = new Date();
+
+
+
+        return D.getFullYear().toString().substring(2, 4) + '.' + (D.getMonth() + 1) + '.' + D.getDate() + '.' + D.getHours() + '.' + (D.getMinutes() < 10 ? '0' : D.getMinutes().toString().substring(0, 1));
+
+
+
+    }
+
+
+
+    $(document).ready(function () {
+
+
+
+        Base.getScript('{G_TEMPLATES_CSS}/weixin/Bottom.js?v=' + GetVerNum(), function () {
+
+
+
+            var _pagetype = $("#hidPageType").val();
+
+
+
+            var _footer = $("div.footer");
+
+
+
+            var _cartpay = $("#mycartpay");
+
+
+
+            var _cartlist = $("li", "#cartBody");
+
+
+
+            var _saysome = $("div.saysome");
+
+
+
+            var _curpage = window.location.href.toLowerCase();
+
+
+
+            
+
+
+
+            var _ishide = false;
+
+
+
+            if (_cartpay.length > 0 && _cartlist.length > 0) {
+
+
+
+                _footer = _cartpay;
+
+
+
+                _pagetype = "1";
+
+
+
+                _ishide = true;
+
+
+
+            }
+
+
+
+            else if (_saysome.length > 0)
+
+
+
+            {
+
+
+
+                _footer = _saysome;
+
+
+
+                _pagetype = "1";
+
+
+
+            }
+
+
+
+            //弹出输入法是否隐藏底部导航
+
+
+
+            if (_curpage.indexOf('/member/recharge.do')>0 || _curpage.indexOf('/member/goodsbuydetail-')>0)
+
+
+
+            {
+
+
+
+                _ishide = true;
+
+
+
+            }
+
+
+
+
+
+
+
+            var _hh = parseInt($(window).height());
+
+
+
+            var _ww=$(window).width();
+
+
+
+            if (_pagetype != "-1" && _footer.length>0) {
+
+
+
+                var SetFooterPos = function () {
+
+
+
+                    var j = 0;
+
+
+
+                    var _setObj;
+
+
+
+                    _setObj = setInterval(function (){
+
+
+
+                        var _hh1 = parseInt($(window).height());
+
+
+
+                        var _hh2 = _hh - _hh1;
+
+
+
+
+
+
+
+                        if (_hh1 > 200) {
+
+
+
+                            if (_hh2 > 0) {
+
+
+
+                                if (parseInt($(window).width()) != parseInt(_ww)) {
+
+
+
+                                    _footer.css("bottom", 0).show();
+
+
+
+                                }
+
+
+
+                            }
+
+
+
+                            else {
+
+
+
+                                _footer.css("bottom", 0).show();
+
+
+
+                            }
+
+
+
+                            j++;
+
+
+
+                           //$("#mycarttest").html(_hh1 + "||" + _hh2 + "||" + $(window).width());
+
+
+
+                            if (j == 3) {
+
+
+
+                                clearInterval(_setObj);
+
+
+
+                            }
+
+
+
+                        }
+
+
+
+                    }, 100);
+
+
+
+                }
+
+
+
+
+
+
+
+                SetFooterPos();
+
+
+
+
+
+
+
+                window.onresize = function () {
+
+
+
+                    if (_ishide) {
+
+
+
+                        _footer.hide();
+
+
+
+                    }
+
+
+
+                    SetFooterPos();
+
+
+
+                };
+
+
+
+            }
+
+
+
+        });
+
+
+
+    });
+
+
+
+</script>
+
+
+
+<script>
+
+
+
+  wx.config({
+
+
+
+    debug: false,
+
+
+
+    appId: "{wc:php:start} echo $wechat['appid'];{wc:php:end}",
+
+
+
+    timestamp: {wc:php:start} echo $signPackage["timestamp"];{wc:php:end},
+
+
+
+    nonceStr: '{wc:php:start} echo $signPackage["nonceStr"];{wc:php:end}',
+
+
+
+    signature: '{wc:php:start} echo $signPackage["signature"];{wc:php:end}',
+
+
+
+  jsApiList: ["checkJsApi", "onMenuShareAppMessage", "onMenuShareTimeline", "onMenuShareWeibo", "onMenuShareQQ"]
+
+
+
+  });
+
+
+
+wx.ready(function () {
+
+
+
+var n = $("#hidLineLink").val();
+
+
+
+    wx.onMenuShareTimeline({
+
+        title: "1元就能购买iPhone 6S！我已买了，快来看看吧！", // 分享标题
+
+        link: n, // 分享链接
+
+        imgUrl: "{G_TEMPLATES_STYLE}/images/mobile/iphone6.jpg", // 分享图标
+
+        success: function () { 
+            var tt =$("#uid").val();
+            $.ajax({
+                    url: "{WEB_PATH}/mobile/home/shareinc",
+                     type: 'post',
+                      dataType: "json",
+                      data : {f : tt},
+                success:function(data){
+                    if(data==2){
+                         alert('分享成功,赠送的现金已经存入你的账户！');
+                     }else if(data==4){
+                        alert('分享成功,您已经分享过，不能再次获得赠金哦');
+                     }else if(data ==1){
+                         alert('感谢您的分享，分享赠现金活动已经结束了哦');
+                     }else if(data ==5){
+                        alert('请登录后分享，以便领取赠送的金额哦');
+                     }
+                   
+                },
+                error:function(data){
+                }
+
+             })  
+
+        },
+
+        cancel: function () { 
+
+            alert('已取消');
+        }
+
+    });
+
+
+
+    wx.onMenuShareAppMessage({
+
+
+
+        title: "1元就能购买iphone6哦，快去看看吧！", // 分享标题
+
+
+
+        desc: "1元就能购买iphone6哦，快去看看吧！", // 分享描述
+
+
+
+        link: n, // 分享链接
+
+
+
+        imgUrl: "{G_TEMPLATES_STYLE}/images/mobile/iphone6.jpg", // 分享图标
+
+
+
+        type: '', // 分享类型,music、video或link，不填默认为link
+
+
+
+        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+
+
+
+         success: function () { 
+
+
+
+           alert('已分享');
+
+
+
+        },
+
+
+
+        cancel: function () { 
+
+
+
+            alert('已取消');
+
+
+
+        }
+
+
+
+    });
+
+
+
+    wx.onMenuShareQQ({
+
+
+
+        title: "1元就能购买iphone6哦，快去看看吧！", // 分享标题
+
+
+
+        desc: "1元就能购买iphone6哦，快去看看吧！", // 分享描述
+
+
+
+        link: n, // 分享链接
+
+
+
+        imgUrl: "{G_TEMPLATES_STYLE}/images/mobile/iphone6.jpg", // 分享图标
+
+
+
+        success: function () { 
+
+
+
+           // 用户确认分享后执行的回调函数
+
+
+
+        },
+
+
+
+        cancel: function () { 
+
+
+
+           // 用户取消分享后执行的回调函数
+
+
+
+        }
+
+
+
+    });
+
+
+
+    wx.onMenuShareWeibo({
+
+
+
+        title: "1元就能购买iphone6哦，快去看看吧！", // 分享标题
+
+
+
+        desc: "1元就能购买iphone6哦，快去看看吧！", // 分享描述
+
+
+
+        link: n, // 分享链接
+
+
+
+        imgUrl: "{G_TEMPLATES_STYLE}/images/mobile/iphone6.jpg", // 分享图标
+
+
+
+        success: function () { 
+
+
+
+           alert('已分享');
+
+
+
+        },
+
+
+
+        cancel: function () { 
+
+
+
+            alert('已取消');
+
+
+
+        }
+
+
+
+    });
+
+
+
+});
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
+
+
+

@@ -1,0 +1,222 @@
+/*------ motion.css */
+*{
+	margin:0;
+	padding:0;
+}
+a, a:visited, a:link{
+	text-decoration:none;
+}
+body{
+	min-height:100%;
+	background-color:#FCFAE1;
+}
+ul, ol{list-style:none;}
+img, table, fieldset{border:0 none; border-collapse:collapse;max-width:100%;}
+em, var, strong, abbr, code, input, textarea{
+	font-style:normal;
+}
+input, textarea{
+	font-style:normal;
+	font-weight:normal;
+	outline:medium none;
+	font-family:Microsoft Yahei, Heiti SC, Helvetica Neue;
+	outline:medium none;
+}
+body{
+	font:Arial, Tahoma, Geneva, sans-serif, Microsoft Yahei, '宋体';
+	font-size:12px;
+	font-weight:normal;
+	font-style:normal;
+	text-align:center;
+}
+/*------- */
+body, html{
+	height:100%;
+}
+header{height:0;}
+center{
+	height:100%;
+	background-color:#FCFAE1;
+	overflow:hidden;
+	position:relative;
+}
+#logo{position: absolute; top:15px; left:10px;}
+.downApp_btn{
+	display:inline-block;
+	width:25%;
+	height:20px;
+	z-index:10;
+}
+.result, .lead_cover{
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:1000;
+	height:100%;
+	width:100%;
+}
+.lead_cover{
+	z-index:10000;
+}
+.cover_img{
+	position:absolute;
+	z-index:2;
+	left:0;
+	top:0;
+}
+.result_box{
+	position:absolute;
+	left:12%;
+	top:14%;
+	z-index:2;
+	width:76%;
+	background-color:#fcfae1;
+	border-radius:8px;
+	padding-bottom:5px;
+	font-family:Arial, Tahoma, Geneva, sans-serif, Microsoft Yahei, '宋体';
+}
+.box_bg{
+	position:relative;
+	padding:10px 10px 0;
+}
+.excellent_stock{
+	position:absolute;
+	z-index:10;
+	width:100%;
+	left:0;
+	top:36%;
+	color:#fff;
+	font-size:20px;
+}
+.box_bg p{
+	position:absolute;
+	width:100%;
+	left:0;
+	top:70%;
+	height:18%;
+	line-height:32px;
+}
+.box_bg p a{
+	float:left;
+	display:inline-block;
+	min-height:32px;
+	color:#fff;
+	width:50%;
+	height:100%;
+}
+.subscribe{
+	padding-right:12px;
+	text-align:right;
+	color:#d62e3b;
+}
+.subscribe a:link, .subscribe a:visited{
+	color:#d62e3b;
+	display:inline-block;
+	line-height:30px;
+}
+.opacity_div{
+	height:100%;
+	width:100%;
+	background-color:#000;
+	opacity:0.7;
+	filter:Alpha(opacity=70);
+}
+/*---- 财神按钮*/
+.button_box{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	z-index:1000;
+	height:100%;
+}
+.button_box .start_box{
+	position: absolute;
+	z-index:2;
+	left:22%;top:20%;
+	width:46%;padding:10px 5%;
+	background-color:#FCFAE1;
+	border-radius:6px;
+}
+/*
+@media screen and(min-height:568px) and(min-width:320px){
+.button_box{position: absolute; top:22.3%; text-align: center; width:100%;height:50.7%}
+.glod_btn{
+	width:83.4%;
+	margin:0 auto;
+	background-color:#eeb2a6;
+	height:100%;
+	display:block;
+	padding:5px;
+	border-radius:50%;
+}
+.glod_btn span{
+	display:inline-block;
+	color:#fff;
+	width:100%;
+	height:100%;
+	line-height:50px;
+	font-size:26px;
+	font-family:Microsoft Yahei;
+	background-color:#d62e3b;
+	border-radius:50%;
+}
+.glod_btn span strong{
+	position:absolute;
+	top:40%;
+	left:0;
+	width:100%;
+}
+}
+@media screen and(max-height:568px) and(max-width:320px){
+	.button_box{position: absolute; top:22.3%; text-align: center; width:100%;height:50.7%}
+	.glod_btn{
+		width:260px;/*83.4%*/
+		margin:0 auto;
+		background-color:#eeb2a6;
+		height:260px;
+		display:block;
+		padding:5px;
+		border-radius:50%;
+	}
+	.glod_btn span{
+		display:inline-block;
+		color:#fff;
+		line-height:42px;
+		width:260px;
+		height:80px;
+		padding:90px 0;
+		font-size:24px;
+		font-family:Microsoft Yahei;
+		background-color:#d62e3b;
+		border-radius:130px;
+	}
+}
+@media screen and(max-height:480px) and(max-width:320px){
+	.button_box{position: absolute; top:23.3%; text-align: center; width:100%;}
+	.glod_btn{
+		width:190px;
+		margin:0 auto;
+		background-color:#eeb2a6;
+		height:190px;
+		display:block;
+		border-radius:100px;
+		padding:5px;
+	}
+	.glod_btn span{
+		display:inline-block;
+		color:#fff;
+		line-height:32px;
+		width:190px;
+		padding:63px 0;
+		height:64px;
+		font-size:18px;
+		font-family:Microsoft Yahei;
+		background-color:#d62e3b;
+		border-radius:95px;
+	}
+}
+/*
+.glod_btn{background: #d62e3b;font-size:18px;font-weight:bold; border-radius:40px; display: inline-block; padding: 0 2em; height: 2.5em; line-height: 2.5em; color: #fff; font-weight: 700; position: relative; text-shadow:1px 1px 0 rgba(0,0,0,0.1);}
+.glod_btn span{position: relative; z-index: 2;}
+.glod_btn:after{content: " "; background: #d62e3b; display: block; position: absolute; width: 3em; height: 3em; border-radius: 1.5em; left: 50%; margin-left: -1.5em; top:-0.5em; z-index: 1}*/

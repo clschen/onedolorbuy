@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0"/>
+    <title>摇一摇抽大奖</title>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+   <meta content="telephone=no" name="format-detection" />
+        <link href="{G_TEMPLATES_CSS}/mobile/comm.css" rel="stylesheet" type="text/css" />
+        <script src="{G_TEMPLATES_JS}/mobile/jquery190.js" type="text/javascript"></script>
+        <link href="{G_TEMPLATES_CSS}/mobile/common1.css?v=1.1" type="text/css" rel="stylesheet"/>
+    </head>
+	
+<script>
+	var Net_Path = '{WEB_PATH}', Img_Path = '{G_TEMPLATES_STYLE}/images/mobile', indexMark = "",indexTree="",ssid="ca39172c00742697e16acd1e6fccfe48929782a4",Appid="wxd4b1d5dbed7a8b49";
+
+		// 拉取设备号
+		localStorage.ssr_deviceid = "f3eb6e297e277a9d90e6217082647417";
+		try{if(localStorage.ssr_deviceid==undefined||localStorage.ssr_deviceid.length<30){$.ajax({type:"POST",async:false,dataType:"json",url: "/app/common/deviceid",success:function(data){
+				if(data.err==0){localStorage.ssr_deviceid = data.deviceid;}}})}
+		}catch(err){}
+		var dataCollectionModel = {};
+		// 获取链接参数
+		var item_types = function(){
+			var search_item = location.search ? location.search : "";
+				search_item = $.trim(search_item);
+				search_item = search_item.replace("?","");
+			var types = search_item.split("&");
+			var objs = {};
+				for(var i=0;i<types.length;i++){
+					objs[types[i].split("=")[0]]  = types[i].split("=")[1];
+				}
+			return objs;
+		}();
+		var ssrTokendeviceid = {
+			"deviceid" : (item_types.deviceid ? item_types.deviceid : localStorage.ssr_deviceid),
+			"token"    : (item_types.token?item_types.token:(localStorage.token?localStorage.token:"")),
+			"ssid"     : (item_types.ssid?item_types.ssid:"ca39172c00742697e16acd1e6fccfe48929782a4")
+		}
+	</script>
+	<script src="{G_TEMPLATES_JS}/mobile/common1.js" type="text/javascript"></script>
+    <link href="{G_TEMPLATES_CSS}/mobile/motion.css" rel="stylesheet" type="text/css" /></head>
+<body>
+<header>
+<div id="error_tips">
+	<div class="error_tips">
+		<h4 class="error_tips_title">提示</h4>
+		<p class="error_tips_content"><var>登录认证失败：账号与密码不匹配；如果遗忘密码，请点击找回密码</var></p>
+		<div class="close_error_tips"><a href="javascript:void(0)">确定</a></div>
+	</div>
+	<div class="opacity_div"></div>
+</div>
+<div id="com_tips" style="display:;">
+	<div class="error_tips">
+
+		<h4 class="error_tips_title" ssr-tip='com_title'>提示</h4>
+		<p class="error_tips_content"><var ssr-tip='com_ctx'>注意</var></p>
+		<div class="close_error_tips"><a href="javascript:void(0)">我知道了</a></div>
+	</div>
+	<div class="opacity_div"></div>
+</div>
+<div style="display:none;" class="lead_cover" id="lead_cover">
+	<div class="cover_img">
+		<img src="{G_TEMPLATES_STYLE}/images/mobile/wx_broswer.png" width="100%" />
+	</div>
+	<div class="opacity_div"></div>
+</div>
+</header>
+<script>
+// 微信分享完成回调函数
+function wxShareCallback(res){}
+// 微信分享配置文件
+var wx_conf = {
+	img_url: "{G_TEMPLATES_STYLE}/images/mobile/ssrong_logo_100.jpg",
+	sharetitle:"",
+	sharedesc:"",
+	appid : "wxd4b1d5dbed7a8b49",
+	link: ""
+};
+function wxShareCount(res,$conf,$ref){
+	var $url   = encodeURIComponent($conf.link?$conf.link:location.href);
+	var $title = "抢红包啦";
+	var $from  = $ref?$ref:"weixin";
+	$.post('/app/common/logShare?title='+$title+'&url='+$url+'&shareto='+$from,ssrTokendeviceid,function($msg){
+	});
+}
+</script>
+<script>
+var useragent = navigator.userAgent;
+if(localStorage.downapp_count&&parseInt(localStorage.downapp_count)>=3){
+	+(function(){
+		var ele = document.getElementById("downApp_bar");
+			ele?ele.style.display="none":"";
+	}())
+}
+$(function(){
+	+(function(){
+		if(/MicroMessenger/.test(useragent)){
+			$("#downApp_btn").attr("src","javascript:void(0)");
+			$("#downApp_btn").click(function(){
+				$("#lead_cover").show();
+				return false;
+			});
+		}
+		var ele = document.getElementById("downApp_btn");
+		var agent = useragent.toLowerCase();
+	}())
+})
+$(".dowApp_close").click(function(){
+	$("#downApp_bar").hide();
+	localStorage.downapp_count?localStorage.downapp_count++:localStorage.downapp_count=1;
+})
+$(function(){
+	$("#lead_cover").click(function(){
+		$(this).hide();
+	});
+})
+</script>
+<div style="display:none;"><audio src="{G_TEMPLATES_CSS}/mobile/motion.mp3"></audio></div>
+<center>
+	<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.ssrong.android&g_f=991653" id="" class="downApp_btn cblue"></a>
+	<article class="active_page">
+		<section>
+			<img id="bg_pic" src="{G_TEMPLATES_STYLE}/images/mobile/motion_4s.gif?v=1.0" width="100%" alt="">
+			<img id="bg_pic" src="{G_TEMPLATES_STYLE}/images/mobile/motion.gif?v=1.0" width="100%" alt="">
+		</section>
+		<section class="button_box" style="display:;">
+			<div class="start_box"><img src="{G_TEMPLATES_STYLE}/images/mobile/mam_txt_start.png?v=1.0" width="100%" /></div>
+			<div class="opacity_div"></div>
+		</section>	
+		<audio src="" id="audio1"></audio>
+	</article>
+	<div class="result" id="result" style="display:none;">
+		<div class="opacity_div"></div>
+	</div>
+	<ul id="ten_exce" style="display:none;">
+					<li>瑞泰科技<br/>002066.SZ</li>
+					<li>浙江鼎力<br/>603338.SS</li>
+					<li>山东钢铁<br/>600022.SS</li>
+					<li>华胜天成<br/>600410.SS</li>
+					<li>博腾股份<br/>300363.SZ</li>
+					<li>西部证券<br/>002673.SZ</li>
+					<li>汉缆股份<br/>002498.SZ</li>
+					<li>国投新集<br/>601918.SS</li>
+					<li>中国船舶<br/>600150.SS</li>
+					<li>金螳螂<br/>002081.SZ</li>
+					<li>三泰控股 <br/>002312</li>
+					<li>华胜天成<br/>600410</li>
+					<li>博腾股份<br/>300363</li>
+					<li>豫金刚石     <br/>300064</li>
+			</ul>
+	<div id="loading" style="position:fixed;z-index:10000;left:48%;top:48%;display:none;">
+		<div><img src="{G_TEMPLATES_STYLE}/images/mobile/loading.gif" width="16px"/ ></div>
+		<div class="opacity_div"></div>
+	</div>
+</center>
+<div style="display:none;" class="lead_cover" id="share_cover">
+	<div class="cover_img">
+		<img src="{G_TEMPLATES_STYLE}/images/mobile/share2.png?v=1" width="100%" />
+	</div>
+	<div class="opacity_div"></div>
+</div>
+<script>
+	+(function(){
+		var ele = document.getElementById("bg_pic");
+		var src = ele.getAttribute("src");
+		var scale = window.screen.availHeight /window.screen.availWidth;
+			src = src.replace(/.(jpg|png|gif)/gm,"_4s.$1");
+		if(scale<1.5){
+			ele.setAttribute("src",src);
+		}
+	}())
+</script>
+<script>$.noConflict();</script>
+<script type="text/javascript" src="{G_TEMPLATES_JS}/mobile/zepto.1.1.4.min.js"></script>
+<script type="text/javascript">
+	var $motionKey = false;
+	function setStocks($){
+		document.getElementById("excellent_stock").innerHTML = "";
+		document.getElementById("loading").style.display = "none";
+		var num,len;
+			len = html = $("#ten_exce li").length;
+		num = Math.floor(Math.random()*len);
+		var html = $("#ten_exce li")[num];
+			html = html.innerHTML;
+		document.getElementById("excellent_stock").innerHTML = html;
+		document.getElementById("result").style.display = "block";
+	}
+	(function(){
+		var SHAKE_THRESHOLD = 1000;
+		var last_update = 0;
+		var x = y = z = last_x = last_y = last_z = 0;
+	
+		if (window.DeviceMotionEvent) {
+			window.addEventListener('devicemotion', deviceMotionHandler, false);
+		} else {
+			alert('本设备不支持摇一摇');
+		}
+		
+		var audio = document.getElementById("audio1");
+	
+		function deviceMotionHandler(eventData) {
+			var acceleration = eventData.accelerationIncludingGravity;
+			var curTime = new Date().getTime();
+	
+			if ((curTime - last_update) > 100) {
+				var diffTime = curTime - last_update;
+				last_update = curTime;
+				x = acceleration.x;
+				y = acceleration.y;
+				z = acceleration.z;
+				var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+	
+				if (speed > SHAKE_THRESHOLD&&$motionKey) {
+					audio.play();
+					document.getElementById("result").style.display = "none";
+					document.getElementById("loading").style.display = "block";
+					setTimeout(function(){
+						setStocks(jQuery);
+					},1500)
+				}
+				last_x = x;
+				last_y = y;
+				last_z = z;
+			}
+		}
+	})()
+	function loadFile(){
+		var audio1 = document.getElementById("audio1");
+			audio1.setAttribute('src','{G_TEMPLATES_JS}/mobile/motion.mp3');
+			audio1.load();
+	}
+    $('html').one('touchstart',function(){
+		document.getElementById("audio1").play();
+		$motionKey = true;
+		loadFile();
+		$("#result").hide();
+    });
+	$(".button_box").click(function(){
+		$(this).hide();
+		$motionKey = true;
+	});
+	$("#result img, #result .opacity_div").click(function(){
+		$("#result").hide();
+	})
+	$("#sharePage").click(function(){
+		 document.getElementById("share_cover").style.display = "block";
+	});
+	$("#lead_cover, #share_cover").click(function(){
+		$(this).hide();
+	});
+	// 微信分享配置文件
+	var wx_conf = {
+		img_url: "{G_TEMPLATES_STYLE}/images/mobile/mammon_share.png",
+		sharetitle:"抢红包啦~",
+		sharedesc:"抢红包啦~",
+		appid : "wx4d055b7f1a81b576",
+		link: "{WEB_PATH}"
+	};
+</script>
+<div style="height:70px;"></div>     
+{wc:templates "mobile/index","footer1"}
+
+
+
+<script src="{G_TEMPLATES_JS}/mobile/weixinApi.js" type="text/javascript"></script>
+<script>
+	if(item_types.cid == 10001){
+		wx_conf.sharetitle = "抢红包啦";
+		wx_conf.sharedesc  = "抢红包啦";
+	}else if(item_types.cid == 10002){
+		wx_conf.link = "{WEB_PATH}";
+	}
+	// 微信公众平台配置信息
+	wx.config({
+      debug: ''?true:false,
+      appId: 'wx4d055b7f1a81b576',
+      timestamp: ('1441191921'?parseInt('1441191921'):""),
+      nonceStr: '8La0h4RbAHtEMSVF',
+      signature: '6ae5acf9d54f1f2127ec3de9b59a35f997606288',
+      jsApiList: [
+        'checkJsApi',
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'onMenuShareQQ',
+        'onMenuShareWeibo',
+        'hideMenuItems',
+        'showMenuItems',
+        'hideAllNonBaseMenuItem',
+        'showAllNonBaseMenuItem',
+        'translateVoice',
+        'startRecord',
+        'stopRecord',
+        'onRecordEnd',
+        'playVoice',
+        'pauseVoice',
+        'stopVoice',
+        'uploadVoice',
+        'downloadVoice',
+        'chooseImage',
+        'previewImage',
+        'uploadImage',
+        'downloadImage',
+        'getNetworkType',
+        'openLocation',
+        'getLocation',
+        'hideOptionMenu',
+        'showOptionMenu',
+        'closeWindow',
+        'scanQRCode',
+        'chooseWXPay',
+        'openProductSpecificView',
+        'addCard',
+        'chooseCard',
+        'openCard'
+      ]
+	});
+wx.checkJsApi({
+    jsApiList: [
+        'checkJsApi',
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'onMenuShareQQ',
+        'onMenuShareWeibo'
+	] ,
+    success: function(res) {
+        // 以键值对的形式返回，可用的api值true，不可用为false
+        // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+	}
+});	
+wx.ready(function () {	
+	wx.onMenuShareAppMessage({
+	  title: wx_conf.sharetitle,
+	  desc: wx_conf.sharedesc,
+	  link: wx_conf.link,
+	  imgUrl: wx_conf.img_url,
+	  //alert('用户点击发送给朋友');
+	  trigger: function (res) {},
+	  success: function (res) {
+		wxShareCallback()
+		wxShareCount(res,'wx-one');
+	  },
+	  cancel: function (res) {}, // 取消
+	  fail: function (res) {} //失败
+	});
+	wx.onMenuShareTimeline({
+	  title: wx_conf.sharetitle,
+	  desc: wx_conf.sharedesc,
+	  link: wx_conf.link,
+	  imgUrl: wx_conf.img_url,
+	  //alert('用户点击分享到朋友圈');
+	  trigger: function (res) {},
+	  success: function (res) {
+		wxShareCallback(res);
+		wxShareCount(res,wx_conf,'wx-all');
+	  },
+	  cancel: function (res) {}, // 取消
+	  fail: function (res) {} //失败
+	});
+	
+    wx.onMenuShareQQ({
+	  title: wx_conf.sharetitle,
+	  desc: wx_conf.sharedesc,
+	  link: wx_conf.link,
+	  imgUrl: wx_conf.img_url,
+	  //alert('用户点击发送腾讯微博');
+	  trigger: function (res) {},
+	  success: function (res) {
+		wxShareCallback(res)
+		wxShareCount(res,'qq');
+	  },
+	  cancel: function (res) {}, // 取消
+	  fail: function (res) {} //失败
+    });
+	
+    wx.onMenuShareWeibo({
+	  title: wx_conf.sharetitle,
+	  desc: wx_conf.sharedesc,
+	  link: wx_conf.link,
+	  imgUrl: wx_conf.img_url,
+	  //'用户点击分享到新浪微博';
+	  trigger: function (res) {
+	  },
+	  success: function (res) {
+		wxShareCallback(res)
+		wxShareCount(res,'weibo');
+	  },
+	  cancel: function (res) {}, // 取消
+	  fail: function (res) {} //失败
+    });
+	function reShare(wx_conf){
+		wx.onMenuShareAppMessage({
+		  title: wx_conf.sharetitle,
+		  desc: wx_conf.sharedesc,
+		  link: wx_conf.link,
+		  imgUrl: wx_conf.img_url,
+		  //alert('用户点击发送给朋友');
+		  trigger: function (res) {},
+		  success: function (res) {
+			wxShareCallback()
+			wxShareCount(res,'wx-one');
+		  },
+		  cancel: function (res) {}, // 取消
+		  fail: function (res) {} //失败
+		});
+		wx.onMenuShareTimeline({
+		  title: wx_conf.sharetitle,
+		  desc: wx_conf.sharedesc,
+		  link: wx_conf.link,
+		  imgUrl: wx_conf.img_url,
+		  //alert('用户点击分享到朋友圈');
+		  trigger: function (res) {},
+		  success: function (res) {
+			wxShareCallback(res);
+			wxShareCount(res,wx_conf,'wx-all');
+		  },
+		  cancel: function (res) {}, // 取消
+		  fail: function (res) {} //失败
+		});
+		
+		wx.onMenuShareQQ({
+		  title: wx_conf.sharetitle,
+		  desc: wx_conf.sharedesc,
+		  link: wx_conf.link,
+		  imgUrl: wx_conf.img_url,
+		  //alert('用户点击发送腾讯微博');
+		  trigger: function (res) {},
+		  success: function (res) {
+			wxShareCallback(res)
+			wxShareCount(res,'qq');
+		  },
+		  cancel: function (res) {}, // 取消
+		  fail: function (res) {} //失败
+		});
+		
+		wx.onMenuShareWeibo({
+		  title: wx_conf.sharetitle,
+		  desc: wx_conf.sharedesc,
+		  link: wx_conf.link,
+		  imgUrl: wx_conf.img_url,
+		  //'用户点击分享到新浪微博';
+		  trigger: function (res) {
+		  },
+		  success: function (res) {
+			wxShareCallback(res)
+			wxShareCount(res,'weibo');
+		  },
+		  cancel: function (res) {}, // 取消
+		  fail: function (res) {} //失败
+		});
+	}
+});
+</script>
+</body>
+</html>

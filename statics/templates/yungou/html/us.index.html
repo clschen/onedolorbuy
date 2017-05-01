@@ -1,0 +1,116 @@
+{wc:templates "index","header"}
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/user.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/user.message.css"/>
+<div class="layout980 clearfix"> 
+
+	<div class="sidebar">
+		<div style="height:140px;">
+		<a href="">{wc:templates "us","left"}</a>
+		</div>  
+	</div>	
+	<div class="content clearfix" style="width:799px; padding-top:20px;">
+		<div class="per-info">
+			<ul>
+				<li class="info-mane gray02">
+					<b class="gray01">{wc:fun:get_user_name($member,'username')}</b>
+				</li>
+				<li class="info-address gray02"><span></span></li>
+             				 <li class="info-intro gray02">
+             				 {wc:if $member['qianming']!=null}
+             				 {wc:$member['qianming']}
+            				  {wc:else}
+            				  这家伙很懒，什么都没留下。
+            				  {wc:if:end}
+             				 </li>
+			</ul>
+		</div>
+		<div class="su_s">
+			<span>经验值：</span><b>{wc:$member['jingyan']}</b>
+			<div class="yun_zj"></div>
+			<span>主页：</span><a href="" class="blue"><s></s>{WEB_PATH}/uname/{wc:fun:idjia($member['uid'])}</a>
+		</div>
+	</div>
+	<div class="clear"></div>
+
+	{wc:templates "us","tab"}
+	{wc:if $membergo}
+	<div id="divInfo0" class="ugoods_show">
+		<ul class="ugtitle">
+			<li>商品图片</li>
+			<li class="gname">商品名称</li>
+			<li class="yg_status">商品状态</li>
+			<li class="joinInfo">参与人次</li>
+			<li class="do">操作</li>
+		</ul>
+		{wc:loop $membergo $go}
+			 {wc:php:start}
+        				$jiexiao = get_shop_if_jiexiao($go['shopid']);    
+						 if ($jiexiao['q_uid']){
+							$url = "dataserver";
+						 }else{
+							$url = "goods";
+						 }
+    		{wc:php:end}
+			<ul class="ugoods_list">
+			    <li><a target="_blank" href="{WEB_PATH}/{wc:$url}/{wc:$go['shopid']}"><img class="pic"  src="{G_UPLOAD_PATH}/{wc:$jiexiao['thumb']}"></a></li>
+			                    <li class="gname" style="margin:15px 0 0 0;">
+			        <a target="_blank" href="{WEB_PATH}/{wc:$url}/{wc:$go['shopid']}" class="blue">{wc:$go['shopname']}</a>
+			        <p class="gray02">购买时间：{wc:fun:microt($go['time'],"r")}</p>
+			        <p class="gray02">购买人：{wc:fun:get_user_name($member,'username')}</p>
+			    </li>
+			    	{wc:if $jiexiao['q_uid']}
+			                    <li class="yg_status" style="margin:23px 0 0 0;">幸运云购码：<br><span class="c_red">{wc:$jiexiao['q_user_code']}</span></li>
+			                    <li class="joinInfo" style="margin:23px 0 0 0;"><p><em>{wc:$go['gonumber']}</em>人次</p></li>
+			                      <li class="do" style="margin:23px 0 0 0;"><a href="{WEB_PATH}/dataserver/{wc:$go['shopid']}"  class="blue" title="详情">查看详情</a></li>
+				{wc:else}
+				<li class="yg_status" style="margin:23px 0 0 0;">揭晓时间：<br><span class="c_red">项目正在进行中。。</span></li>
+				<li class="joinInfo" style="margin:23px 0 0 0;"><p><em>{wc:$go['gonumber']}</em>人次</p></li>
+				  <li class="do" style="margin:23px 0 0 0;"><a href="{WEB_PATH}/goods/{wc:$go['shopid']}" class="blue" title="详情">查看详情</a></li>
+				{wc:if:end}		                                    
+			</ul>
+		{wc:loop:end}		
+	</div>
+	{wc:else}
+	<div class="New-content"><div class="tips-con"><i></i>TA还没有获得商品哦</div></div> 
+	{wc:if:end}
+</div>
+
+
+</div>
+<script type="text/javascript">
+	$(".yu_ff").mouseover(function(){
+	  $(".h_1yyg_eject").show();
+	})
+	$(".yu_ff").mouseout(function(){
+	  $(".h_1yyg_eject").hide();
+	})
+
+		     $("#m_all_sort").hide();
+	     $(".m_menu_all").mouseenter(function(){
+			    $(".m_all_sort").show();
+	     })
+		 $(".m_menu_all").mouseleave(function(){
+			    $(".m_all_sort").hide();
+	     })
+		 $(".m_all_sort").mouseenter(function(){
+			    $(this).show();
+	     })
+		 $(".m_all_sort").mouseleave(function(){
+			    $(this).hide();
+	     })
+	     $(function(){
+	       $(window).scroll(function() {	
+	      		
+	     		if($(window).scrollTop()>=130&&$(window).scrollTop()<=560){
+	     			$(".head_nav").addClass("fixedNav");	
+	     			$("#m_all_sort").fadeOut();
+	     		}else if($(window).scrollTop()>560){
+	     			$(".head_nav").addClass("fixedNav");
+	     			$("#m_all_sort").fadeOut();
+	     	} else if($(window).scrollTop()<130){
+	     			$(".head_nav").removeClass("fixedNav");
+	     	}
+	           });
+	     });
+</script>
+{wc:templates "index","footer"}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>验证身份 - {wc:$webname}</title>
+    <meta content="app-id=518966501" name="apple-itunes-app" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link href="{G_TEMPLATES_CSS}/mobile/comm.css" rel="stylesheet" type="text/css" />
+	<link href="{G_TEMPLATES_CSS}/mobile/login.css" rel="stylesheet" type="text/css" />
+	<script src="{G_TEMPLATES_JS}/mobile/jquery190.js" language="javascript" type="text/javascript"></script>
+	<script id="pageJS" data="{G_TEMPLATES_JS}/mobile/MobileCheck.js" language="javascript" type="text/javascript"></script>
+</head>
+<body style="background: #f4f4f4;">
+    <div class="h5-1yyg-v1" id="content">
+        
+<!-- 栏目页面顶部 -->
+
+
+<!-- 内页顶部 -->
+
+    <header class="header" style="position: fixed;width: 100%;z-index: 99999999;">
+
+    <h1 style="width: 100%;text-align: center;float: none;top: 0px;left: 0px;font-size: 25px;" class="fl">
+        <span style="display: block;height: 49px;line-height: 49px;">
+            <a style="font-size: 20px;line-height: 49px;" href="{WEB_PATH}/mobile/mobile">
+               验证身份
+            </a>
+        </span>
+
+        <!--<img src="{G_UPLOAD_PATH}/{wc:fun:Getlogo()}"/>
+        -->
+        <!--<img src="/statics/templates/yungou/images/sjlogo.png"/>
+        -->
+    </h1>
+
+    <a id="fanhui" class="cefenlei" onclick="history.go(-1)" href="javascript:;">
+        
+        <img width="30" height="30" src="/statics/templates/yungou/images/mobile/fanhui.png">
+    </a>
+
+    <div class="fr head-r" style="position: absolute;right: 6px;top: 10px;">
+
+        <!--<a href="{WEB_PATH}/mobile/user/login" class="z-Member"></a>
+    -->
+    <a href="{WEB_PATH}/mobile/mobile" class="z-shop" style="background-position: 2px -73px;"></a>
+
+</div>
+
+</header>
+
+        <section style="padding-top: 55px;">
+	        <div class="registerCon">
+	            <input type="hidden" id="inpMobile" name="mobile" value="{wc:$mobile}" />
+    	        <ul>
+        	        <li><input type="text" id="mobileCode" name="code" placeholder="请输入手机验证码" class="rText"/><s class="rs2"></s></li>
+                    <li><a href="javascript:void(0);" id="chkPostCode" class="nextBtn  orgBtn">确认，下一步</a></li>
+                    <li style="font-size:12px;">如未收到验证短信，请在120秒后点击重新发送。</li>
+                    <li><a id="btnGetCode" class="resendBtn grayBtn">重新发送</a></li>
+                </ul>
+	        </div>
+        </section>
+
+        <script>
+        $(function(){
+        var b = function() {
+        var submiting = false;
+        var $mobile = $('input[name=mobile]');
+        var $code = $('input[name=code]');
+        $('#chkPostCode').click(function(){
+        if (submiting) {
+        return false;
+        }
+        var post = {
+        mobile : $mobile.val(),
+        code : $code.val(),
+        };
+        if (post.code == '' ) {
+        $.PageDialog.fail("验证码不能为空");
+        return false;
+        }
+        var the = $(this).text('正在提交');
+	    submiting = true;
+            $.post("{WEB_PATH}/mobile/user/step2chk",post,function(s){
+            if (s==123) {
+                window.location.href="{WEB_PATH}/mobile/user/step3";
+            } else {
+                submiting = false;
+                the.text('提交');
+                $.PageDialog.fail(s);
+         }
+            },'text');		
+        });
+        };
+        var a = function() {
+        Base.getScript(Path.Skin + "/js/mobile/pageDialog.js", b);
+        };
+        Base.getScript(Path.Skin + "/js/mobile/Comm.js", a);
+        });
+        </script>
+
+
+
+
+{wc:templates "mobile/index","footer"}
+<script language="javascript" type="text/javascript">
+  var Path = new Object();
+  Path.Skin="{G_TEMPLATES_STYLE}";  
+  Path.Webpath = "{WEB_PATH}";
+  
+var Base={head:document.getElementsByTagName("head")[0]||document.documentElement,Myload:function(B,A){this.done=false;B.onload=B.onreadystatechange=function(){if(!this.done&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){this.done=true;A();B.onload=B.onreadystatechange=null;if(this.head&&B.parentNode){this.head.removeChild(B)}}}},getScript:function(A,C){var B=function(){};if(C!=undefined){B=C}var D=document.createElement("script");D.setAttribute("language","javascript");D.setAttribute("type","text/javascript");D.setAttribute("src",A);this.head.appendChild(D);this.Myload(D,B)},getStyle:function(A,B){var B=function(){};if(callBack!=undefined){B=callBack}var C=document.createElement("link");C.setAttribute("type","text/css");C.setAttribute("rel","stylesheet");C.setAttribute("href",A);this.head.appendChild(C);this.Myload(C,B)}}
+function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}
+Base.getScript('{G_TEMPLATES_JS}/mobile/Bottom.js');
+</script>
+
+    </div>
+</body>
+</html>

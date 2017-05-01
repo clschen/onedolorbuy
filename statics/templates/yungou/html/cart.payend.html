@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>微信扫码支付</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="description" content="惊喜云购" />
+    <link rel="stylesheet" type="text/css" href="http://www.591jx.net/css/comm.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.591jx.net/css/header.css" />
+    <script language="javascript" type="text/javascript" src="http://www.591jx.net/js/jquery181.js"></script>
+    <meta name="decorator" content="template_footer" />
+    <link rel="stylesheet" type="text/css" href="http://www.591jx.net/css/weixinpay.css" />
+    <script language="javascript" type="text/javascript">
+        $(function () { var e = $("#qr_box"); var c = $("#guide"); c.css({ left: "50%", opacity: 0 }); e.hover(function () { c.css("display", "block").stop().animate({ marginLeft: "+156px", opacity: 1 }, 900, "swing", function () { c.animate({ marginLeft: "+143px" }, 300) }) }, function () { c.stop().animate({ marginLeft: "-101px", opacity: 0 }, "400", "swing", function () { c.hide() }) }); 
+        var d = "2015101316467732", b = 0, toh = null, bto = 3000, next = true;
+        toh = setTimeout(poll, bto);
+        function poll(){
+          b++;
+          $.ajax({
+            url:"/weixinpay/poll.action?out_trade_no="+d,
+            type: "GET",
+            dataType: "json",
+            success: function(res){
+              // res: {ps, tt}
+              var rurl;
+              switch(res.ps){
+                case 0:
+                  break;
+                case 1:
+                case 3:
+                  next = false;
+                  if(res.tt == 1){
+                    rurl = "/user/UserBalance.action";
+                  }else if(res.ps == 3){
+                    return;
+                  }else{
+                    rurl = "/mycart/shopok.action?id="+d;
+                  }
+                  location.href = rurl;
+                  break;
+                case 2:
+                default:
+                  next = false;
+                  return;
+              }
+            },
+            complete: function(){
+              var delta;
+              if(next){
+                delta = parseInt(b/20) * 1000;
+                toh = setTimeout(poll, bto+delta);
+              }else{
+                if(toh != null){
+                   clearTimeout(toh);
+                   toh = null;
+                }
+              }
+            }
+          });
+        }
+        });
+    </script>
+  
+  </head>
+  <body>
+         <!--顶部-->
+<!--头部-->
+    
+    <div class="wx_header">
+        <div class="wx_logo">
+            <img src="/Images/wxlogo_pay.png" alt="微信支付标志" title="微信支付"></div>
+    </div>
+    <div class="weixin">
+        <div class="weixin2">
+            <b class="wx_box_corner left pngFix"></b><b class="wx_box_corner right pngFix"></b>
+            <div class="wx_box pngFix">
+                <div class="wx_box_area">
+                    <div class="pay_box qr_default">
+                        <div class="area_bd">
+                        <span id="qr_box" class="wx_img_wrapper">
+                        
+                            <img style="border-width:0px;" alt="二维码" src="http://www.591jx.net/uploadImages/2015101316467732.png" class="qrcode" id="payQRImg" />
+                            <img id="guide" alt="" src="/Images/wxwebpay_guide.png" class="guide pngFix" style="left: 50%; opacity: 0; display: none; margin-left: -101px;" />
+                        
+                        
+                        </span>
+                        
+                            <div class="msg_default_box"><i class="icon_wx pngFix"></i>
+                                <p>
+                                    请使用微信扫描<br />
+                                                                                                            二维码以完成支付
+                                </p>
+                            </div>
+                        
+                            <div class="msg_box"><i class="icon_wx pngFix"></i>
+                                <p><strong>扫描成功</strong>请在手机确认支付</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wx_hd">
+                    <div class="wx_hd_img icon_wx"></div>
+                </div>   
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

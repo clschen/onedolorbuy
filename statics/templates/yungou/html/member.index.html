@@ -1,0 +1,175 @@
+{wc:templates "index","header"}
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/user.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/user.message.css"/>
+<div class="layout980 clearfix">
+{wc:templates "member","left"}
+<div class="center">
+	<div class="per-info">
+		<ul>
+			<li class="info-mane gray02" style="font-size: 16px;color: #555;">
+				你好，
+				{wc:if $member['username']!=null}
+				<a style="font-size: 16px;color: #555;" href="{WEB_PATH}/uname/{wc:fun:idjia($member['uid'])}" target="_blank">{wc:$member['username']}</a>
+				{wc:elseif $member['mobile']!=null}
+				<a style="font-size: 16px;color: #555;" href="{WEB_PATH}/uname/{wc:fun:idjia($member['uid'])}" target="_blank">{wc:$member['mobile']}</a>
+				{wc:else}
+				<a style="font-size: 16px;color: #555;" href="{WEB_PATH}/uname/{wc:fun:idjia($member['uid'])}" target="_blank">{wc:$member['email']}</a>
+				{wc:if:end}
+				{wc:if $member['username']!=null}
+				
+				{wc:if $member['mobile']!=null}
+				<a style="font-size: 14px;color: #999;" href="{WEB_PATH}/uname/{wc:fun:idjia($member['uid'])}" target="_blank">({wc:$member['mobile']})</a>
+				{wc:else}
+				<a style="font-size: 14px;color: #999;" href="{WEB_PATH}/uname/{wc:fun:idjia($member['uid'])}" target="_blank">({wc:$member['email']})</a>
+				{wc:if:end}
+				
+				{wc:if:end}
+			</li>
+			<li class="account-money">
+				<em class = "gray02">经验值：{wc:$member['jingyan']}</em> 
+				<span class="class-icon0{wc:$dengji_1['groupid']} gray01"><s></s>{wc:$dengji_1['name']}</span>
+				{wc:if $dengji_2}
+					<span class = "gray02">（还差{wc:$dengji_x}经验值升级到{wc:$dengji_2['name']}）</span>
+				{wc:else}
+					<span class = "gray02">（还差{wc:$dengji_x}经验值升级到最高等级）</span>
+				{wc:if:end}
+			</li>
+			<li class="account-money" style="width: 300px;line-height: 25px;">
+				<em class="gray02">帐户余额：</em>
+				<span class="money-red">{wc:fun:uidcookie('money')}云购币</span>&nbsp;&nbsp;
+				<a href="{WEB_PATH}/member/home/userrecharge" title="充值" class="blue">充值</a>
+			</li>
+		</ul>		
+		<div class="bangding">
+			<ul>
+				{wc:if $member['username']!=null}
+				<li><a class="nicheng" href="/index.php/member/home/modify" style="padding-top: 14px;">昵称<br/>已设定</a></li>
+				{wc:else}
+				<li  style="border-radius:30px;border: 1px solid #d60; "><a style="color: #22AAFF;padding-top: 14px;" class="nicheng" href="/index.php/member/home/modify" style="padding-top: 13px;">昵称<br/>未设定</a></li>
+				{wc:if:end}
+				<!--
+				{wc:if $member['qq']!=null}
+				<li  style=""><a class="qq" href="/index.php/member/home/qqclock"><i></i>已绑定</a></li>
+				{wc:else}
+				<li  style="border-radius:30px;border: 1px solid #d60; "><a style="color: #22AAFF;" class="qq1" href="/index.php/member/home/qqclock"><i></i>未绑定</a></li>
+				{wc:if:end}
+				-->
+				{wc:if $member['email']!=null}
+				<li><a class="email" href="/index.php/member/home/mailchecking"><i></i>已绑定</a></li>
+				{wc:else}
+				<li  style="border-radius:30px;border: 1px solid #d60; "><a style="color: #22AAFF;" class="email1" href="/index.php/member/home/mailchecking"><i></i>未绑定</a></li>
+				{wc:if:end}
+				{wc:if $member['mobile']!=null}
+				<li><a class="tel" href="/index.php/member/home/mobilechecking"><i></i>已绑定</a></li>
+				{wc:else}
+				<li style="border-radius:30px;border: 1px solid #d60; "><a style="color: #22AAFF;" class="tel1" href="/index.php/member/home/mobilechecking"><i></i>未绑定</a></li>
+				{wc:if:end}
+
+			</ul>
+		</div>
+	</div>
+
+<div style="height: 100px; border-top: 1px solid #dfdfdf;border-right: 1px solid #dfdfdf;">
+	<style>
+		.daohang{
+			width: 133px;
+			height: 48px;
+			float: left;
+			border-right: 1px solid #dfdfdf;
+			border-bottom: 1px solid #dfdfdf;
+			text-align: center;
+			line-height: 48px;
+			color: #888;
+		}
+		.daohang a{
+			text-align: center;
+			line-height: 48px;
+			color: #888;
+			font-size: 14px;
+			display: block;
+			width: 133px;
+			height: 48px;
+		}
+		.daohang:hover,.daohang a:hover{
+			background: #22AAFF;
+			color: #fff;
+		}
+	</style>
+	<li class="daohang"><a href="/index.php/member/home/userbuylist">云购记录</a></li>
+	<li class="daohang"><a href="/index.php/member/home/orderlist">获得的商品</a></li>
+	<li class="daohang"><a href="/index.php/member/home/singlelist">晒单</a></li>
+	<li class="daohang"><a href="/index.php/member/home/joingroup">加入的圈子</a></li>
+	<li class="daohang"><a href="/index.php/member/home/userfufen">我的积分</a></li>
+	<li class="daohang" style="border-right: none;width: 134px;"><a href="/index.php/member/home/userbalance">帐户明细</a></li>
+	<li class="daohang"><a href="/index.php/member/home/invitefriends">邀请好友</a></li>
+	<li class="daohang"><a href="/index.php/member/home/commissions">佣金明细</a></li>
+	<li class="daohang"><a href="/index.php/member/home/cashout">申请提现</a></li>
+	<li class="daohang"><a href="/index.php/member/home/record">提现记录</a></li>
+	<li class="daohang"><a href="/index.php/member/home/modify">编辑资料</a></li>
+	<li class="daohang" style="border-right: none;width: 134px;"><a href="/index.php/member/user/cook_end">退出云购</a></li>
+</div>
+	
+</div>
+<!--center_center_end-->
+<div class="right">				
+	<div class="groups-shadow clearfix">
+		<div class="R-grtit">
+			<h3>圈子热门话题</h3>
+		</div>
+		<ul class="R-list">
+			{wc:loop $quanzi $tm}
+			<li>
+				<p class="groups-t"><a href="{WEB_PATH}/group/nei/{wc:$tm['id']}" target="_blank" class="gray">{wc:$tm['title']}</a></p>
+				<p class="groups-c gray02">{wc:fun:qztitle($tm['qzid'])}<span class="gray03"> | </span>{wc:fun:tiezi($tm['id'])}条回复</p>
+			</li>
+			{wc:loop:end}
+		</ul>
+	</div> 
+	<p class="r-line"></p>
+	<!-- <div class="gg-content">
+		<div class="R-grtit"><h3>公告栏</h3></div>
+		<ul class="gg-list">	
+			<li><span class="point"></span><span class="info"><a href="http://group.1yyg.com/Topic-621.html" target="_blank" class="gray" title="关于“幸运云购码”计算结果错误的公告">关于“幸运云购码”计算结果错误的公告</a></span></li>
+		</ul>
+	</div> -->
+</div>
+<!--center_rjght_end-->
+
+</div>
+<script type="text/javascript">
+	$(".yu_ff").mouseover(function(){
+	  $(".h_1yyg_eject").show();
+	})
+	$(".yu_ff").mouseout(function(){
+	  $(".h_1yyg_eject").hide();
+	})
+
+		     $("#m_all_sort").hide();
+	     $(".m_menu_all").mouseenter(function(){
+			    $(".m_all_sort").show();
+	     })
+		 $(".m_menu_all").mouseleave(function(){
+			    $(".m_all_sort").hide();
+	     })
+		 $(".m_all_sort").mouseenter(function(){
+			    $(this).show();
+	     })
+		 $(".m_all_sort").mouseleave(function(){
+			    $(this).hide();
+	     })
+	     $(function(){
+	       $(window).scroll(function() {	
+	      		
+	     		if($(window).scrollTop()>=130&&$(window).scrollTop()<=560){
+	     			$(".head_nav").addClass("fixedNav");	
+	     			$("#m_all_sort").fadeOut();
+	     		}else if($(window).scrollTop()>560){
+	     			$(".head_nav").addClass("fixedNav");
+	     			$("#m_all_sort").fadeOut();
+	     	} else if($(window).scrollTop()<130){
+	     			$(".head_nav").removeClass("fixedNav");
+	     	}
+	           });
+	     });
+</script>
+{wc:templates "index","footer"}

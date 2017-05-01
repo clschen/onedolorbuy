@@ -1,0 +1,267 @@
+@charset "utf-8";
+*{margin:0;padding:0;list-style:none;font-style:normal;}
+html{-webkit-text-size-adjust:none;-webkit-font-smoothing:subpixel-antialiased;}
+img{border:none;}
+a{text-decoration:none;color:#333;}
+body{min-width:1200px;font-size:14px;font-family:"微软雅黑";color:#333;position:relative;background: #fff;}
+/*yg*/
+.yg_box {
+    width: 100%;
+    position: relative;
+}
+
+.yg_00 {
+    position: relative;
+    height: 300px;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.yg_01 {
+    background-image: url("../../img/yg_01.jpg")/*tpa=http://www.ygqq.com/static/zt/red/img/yg_01.jpg*/;
+}
+
+.yg_02 {
+    background-image: url("../../img/yg_02.jpg")/*tpa=http://www.ygqq.com/static/zt/red/img/yg_02.jpg*/;
+}
+
+.yg_03 {
+    background-image: url("../../img/yg_03.jpg")/*tpa=http://www.ygqq.com/static/zt/red/img/yg_03.jpg*/;
+}
+
+.yg_04 {
+    background-image: url("../../img/yg_04.jpg")/*tpa=http://www.ygqq.com/static/zt/red/img/yg_04.jpg*/;
+}
+
+.yg_05 {
+    background-image: url("../../img/yg_05.jpg")/*tpa=http://www.ygqq.com/static/zt/red/img/yg_05.jpg*/;
+}
+
+.yg_06 {
+    background-image: url("../../img/yg_06.jpg")/*tpa=http://www.ygqq.com/static/zt/red/img/yg_06.jpg*/;
+}
+
+.yg_07 {
+    background-image: url("../../img/yg_07.jpg")/*tpa=http://www.ygqq.com/static/zt/red/img/yg_07.jpg*/;
+}
+
+.yg_08 {
+    background-image: url("../../img/yg_08.jpg")/*tpa=http://www.ygqq.com/static/zt/red/img/yg_08.jpg*/;
+}
+
+.yg_09 {
+    background-image: url("../../img/yg_09.jpg")/*tpa=http://www.ygqq.com/static/zt/red/img/yg_09.jpg*/;
+    height: 91px;
+}
+
+.yg_bn {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.yg_bn img {
+    position: absolute;
+    left: 410px;
+    top: 120px;
+}
+/*浮动气球*/
+.yg_right {
+    background-image: url("../../img/yg_right.png")/*tpa=http://www.ygqq.com/static/zt/red/img/yg_right.png*/;
+    width: 212px;
+    height: 603px;
+    position: fixed;
+    right: 6%;
+    top:50%;
+	margin-top:-300px;
+	display:none;
+}
+
+.yg_2wm {
+    background-image: url("../../img/wm.jpg")/*tpa=http://www.ygqq.com/static/zt/red/img/wm.jpg*/;
+    width: 108px;
+    height: 108px;
+    margin-top: 378px;
+    margin-left: 49px;
+    background-size:100%;
+}
+
+.yg_fh {
+    display: block;
+    background-image: url("../../img/yg_right_fh.png")/*tpa=http://www.ygqq.com/static/zt/red/img/yg_right_fh.png*/;
+    width: 116px;
+    height: 35px;
+    margin-top: 14px;
+    margin-left: 45px;
+}
+
+.yg_hb {
+    display: block;
+    background-image: url("../../img/yg_right_hb.png")/*tpa=http://www.ygqq.com/static/zt/red/img/yg_right_hb.png*/;
+    width: 116px;
+    height: 34px;
+    margin-top: 9px;
+    margin-left: 45px;
+}
+/*选项卡*/
+.yg_content_cn1 {
+    display: none;
+}
+
+.yg_content_cn2 {
+    display: block;
+}
+
+.yg_content {
+    background-image: url("../../img/content_bg.png")/*tpa=http://www.ygqq.com/static/zt/red/img/content_bg.png*/;
+    background-repeat: no-repeat;
+    background-position: 0px 56px;
+    width: 950px;
+    height: 520px;
+    margin: 0 auto;
+    position: relative;
+    top: -800px;
+    margin-top: -520px;
+}
+
+.yg_content_bn {
+    height: 56px;
+    background-image: url("../../img/content_li_bn_bg0.png")/*tpa=http://www.ygqq.com/static/zt/red/img/content_li_bn_bg0.png*/;
+    background-repeat: no-repeat;
+}
+
+.yg_content_bn1 {
+    float: left;
+    height: 56px;
+    color: #fdff41;
+    font-family: "微软雅黑";
+    font-size: 20px;
+    line-height: 56px;
+    text-align: center;
+    cursor:pointer;
+}
+
+.yg_content_bn2 {
+    color: #ed3d3d;
+}
+
+.yg_content_cn {
+    height: 445px;
+}
+
+.yg_content1_tu {
+    float: left;
+    height: 400px;
+    width: 92px;
+    background-image: url("../../img/monkey.png")/*tpa=http://www.ygqq.com/static/zt/red/img/monkey.png*/;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.yg_content1_tu2 {
+    float: left;
+    height: 400px;
+    width: 92px;
+    background-image: url("../../img/dragon.png")/*tpa=http://www.ygqq.com/static/zt/red/img/dragon.png*/;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.yg_content1_tu4 {
+    float: left;
+    height: 400px;
+    width: 92px;
+    background-image: url("../../img/mice.png")/*tpa=http://www.ygqq.com/static/zt/red/img/mice.png*/;
+    background-repeat: no-repeat;
+    margin-top: 44px;
+    margin-left: 30px;
+}
+
+.yg_content1_wz {
+    width: 770px;
+    height: 300px;
+    float: left;
+}
+
+.yg_content1_wz ul {
+    position: relative;
+    width: 770px;
+    height: 300px;
+    margin-top: 40px;
+	margin-left:5px;
+}
+
+
+.yg_content1_bn {
+    display: block;
+    float: left;
+    height: 43px;
+    width: 142px;
+    background-image: url("../../img/content_bn.png")/*tpa=http://www.ygqq.com/static/zt/red/img/content_bn.png*/;
+    background-repeat: no-repeat;
+    margin-top: 74px;
+    margin-left: 280px;
+}
+
+.symbol_1_1 {
+    position: absolute;
+    top: 47px;
+    left: px;
+}
+
+.symbol_1_2 {
+    position: absolute;
+    top: 70px;
+    left: 750px;
+}
+
+.symbol_2_1 {
+    position: absolute;
+    top: 47px;
+    left: 40px;
+}
+
+.symbol_2_2 {
+    position: absolute;
+    top: 70px;
+    left: 700px;
+}
+
+.symbol_3_1 {
+    position: absolute;
+    top: 47px;
+    left: 148px;
+}
+
+.symbol_3_2 {
+    position: absolute;
+    top: 70px;
+    left: 600px;
+}
+
+.symbol_4_1 {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+}
+
+.symbol_4_2 {
+    position: absolute;
+    top: 83px;
+    left: 660px;
+}
+/*领红包按钮*/
+.top_bn {
+    display: block;
+    background-image: url("../../img/content_top_bn.png")/*tpa=http://www.ygqq.com/static/zt/red/img/content_top_bn.png*/;
+    width: 286px;
+    height: 73px;
+    margin: 0 auto;
+    position: relative;
+    top: -1761px;
+    left: 194px;
+    margin-top: -73px;
+}

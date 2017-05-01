@@ -1,0 +1,65 @@
+{wc:templates "index","header"}
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/user.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/user.message.css"/>
+<div class="layout980 clearfix"> 
+{wc:templates "us","left"}
+<div class="content clearfix">
+	<div class="per-info">
+		<ul>
+			<li class="info-mane gray02">
+				<b class="gray01">
+					{wc:fun:get_user_name($member,'username')}
+				</b>
+			</li>
+			<li class="info-address"><span><a href="" class="blue"><s></s>{WEB_PATH}uname/{wc:fun:idjia($member['uid'])}</a></span></li>
+			<li class="info-intro gray02">
+			{wc:if $member['qianming']!=null}
+			{wc:$member['qianming']}
+			{wc:else}
+			这家伙很懒，什么都没留下。
+			{wc:if:end}
+			</li>
+			</ul></div>
+	{wc:templates "us","tab"}
+	<div class="New-content"><div class="tips-con"><i></i>TA还没有晒单哦</div></div>   
+</div>
+
+
+</div>
+<script type="text/javascript">
+	$(".yu_ff").mouseover(function(){
+	  $(".h_1yyg_eject").show();
+	})
+	$(".yu_ff").mouseout(function(){
+	  $(".h_1yyg_eject").hide();
+	})
+
+		     $("#m_all_sort").hide();
+	     $(".m_menu_all").mouseenter(function(){
+			    $(".m_all_sort").show();
+	     })
+		 $(".m_menu_all").mouseleave(function(){
+			    $(".m_all_sort").hide();
+	     })
+		 $(".m_all_sort").mouseenter(function(){
+			    $(this).show();
+	     })
+		 $(".m_all_sort").mouseleave(function(){
+			    $(this).hide();
+	     })
+	     $(function(){
+	       $(window).scroll(function() {	
+	      		
+	     		if($(window).scrollTop()>=130&&$(window).scrollTop()<=560){
+	     			$(".head_nav").addClass("fixedNav");	
+	     			$("#m_all_sort").fadeOut();
+	     		}else if($(window).scrollTop()>560){
+	     			$(".head_nav").addClass("fixedNav");
+	     			$("#m_all_sort").fadeOut();
+	     	} else if($(window).scrollTop()<130){
+	     			$(".head_nav").removeClass("fixedNav");
+	     	}
+	           });
+	     });
+</script>
+{wc:templates "index","footer"}

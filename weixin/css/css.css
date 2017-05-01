@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+a {
+    text-decoration: none;
+    color: #6b6b6b;
+    font-size: 12px;
+}
+
+p {
+    font-size: 12px;
+    color: #6b6b6b;
+}
+
+li {
+    list-style: none;
+}
+
+em {
+    font-style: normal;
+}
+
+img {
+    border: 0;
+}
+
+div {
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+body {
+    font-size: 12px;
+    background: #f7f7f7;
+}
+.w100{
+	width: 100%;
+    background: #f7f7f7;
+}
+.w980 {
+    width: 980px;
+    height: 65px;
+    padding: 15px 0;
+}
+.w980 .logo{
+	float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.w980 .logo .home{
+	display: block;
+    float: left;
+}
+.w980 .logo .line{
+	float: left;
+    margin: 30px 9px 0;
+}
+.w980 .logo .txt{
+	color: #bbb;
+    font-family: "微软雅黑";
+    font-size: 26px;
+    margin-top: 30px;
+    display: block;
+    float: left;
+}
+.w980 .nav{
+	display: inline;
+    float: right;
+    margin-right: 10px;
+    margin-top: 40px;
+}
+.w980 .nav a{
+	color: #666;
+    float: left;
+    font-size: 14px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 5px;
+    text-align: center;
+    width: 100px;
+}
+.w980 .nav .sy{
+	margin-right: 22px;
+}
+.w980 .nav .wx{
+	background: url("/app/images/btnBg.gif") 0 0 no-repeat;
+    display: inline-block;
+    font-weight: bold;
+    height: 25px;
+    text-align: center;
+    width: 100px;
+}
+.coent{
+	width:100%;
+    background: #557218;
+}
+.coent .weixin{
+    width:980px;
+    margin: 0 auto;
+    position: relative;
+}
+.coent .weixin .pic1{
+    height: 112px;
+    background: url("/app/images/pic_01.jpg") 0 0 no-repeat;
+}
+.coent .weixin .pic2{
+    height: 118px;
+    background: url("/app/images/pic_02.jpg") 0 0 no-repeat;
+}
+.coent .weixin .pic3{
+    height: 100px;
+    padding-left: 150px;
+    color: #aab391;
+    background: url("/app/images/pic_03.jpg") 0 0 no-repeat;
+}
+.coent .weixin .pic3 a{
+    color: #aab391;
+    text-decoration:underline;
+}
+.coent .weixin .pic3 a:hover{
+    color: #f60;
+
+}
+ .main{
+    margin:0 auto;
+    width: 980px;
+    background: #fff;
+}
+ .main .mains{
+    margin: 0 auto;
+    padding-bottom: 35px;
+    position: relative;
+    top: 30px;
+    width: 941px;
+}
+ .main .mains .title{
+    border-bottom: 1px solid #eee;
+    color: #333;
+    font-family: "微软雅黑";
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+ .main .mains li{
+    border-bottom: 1px solid #eee;
+    display: inline-block;
+    padding: 50px 0 0;
+    width: 941px;
+}
+ .main .mains dd{
+    display: inline;
+    float: left;
+    margin-left: 60px;
+}
+ .main .mains dd img{
+    display: block;
+    margin:0;
+    padding: 0;
+}
+ .main .mains .mt60{
+    margin-top: 60px;
+}

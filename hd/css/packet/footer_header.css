@@ -1,0 +1,190 @@
+@charset "utf-8";
+@import url("comm.css")/*tpa=http://www.ygqq.com/static/zt/red/css/packet/comm.css*/;
+body{font-family:microsoft Yahei;min-width: 1210px;}
+/*footer*/
+.footer{width: 1210px;margin: 0 auto;padding-top: 65px;padding-bottom: 30px;}
+.footerIn{color: #333333;overflow: hidden;border-bottom: 1px solid #e3e3e3;}
+.footerIn li{float: left;text-align: center;width: 302px;margin-bottom: 28px;}
+.footerIn li span{display: block;width: 56px;height: 51px;background: url("../../img/packet/icon_index.png")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/icon_index.png*/ no-repeat;margin: 0 auto 5px;}
+.footerIn li p{line-height: 63px;height: 63px;text-align: center;font-size: 16px;}
+/*2015 7 22*/
+.footer .yFootSupport{width: 1210px;margin-top: 30px;border-bottom: 1px solid #e5e5e5;}
+.footer .yFootSupport dl{float: left;width: 140px;padding-left:50px;border-right: 1px solid #e5e5e5;height: 127px;background: url("../../img/packet/foot.jpg")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/foot.jpg*/ no-repeat;}
+.footer .yFootSupport dl dt{font-size: 16px;color: #000200;line-height: 36px;}
+.footer .yFootSupport dl dd a{color: #a0a0a0;font-size: 14px;}
+.footer .yFootSupport dl dd a:hover{color: #dd2726;text-decoration: underline;}
+.footer .yFootSupport dl.dlLast{border:none;width: 160px;}
+.footer .yFootSupport dl.dlLast dt{color: #000000;font-size: 20px;}
+.footer .yFootSupport dl.dlLast dd{color: #555555;line-height: 34px;}
+.footerBottom{color: #777777;font-size: 14px;line-height: 26px;width: 590px;margin: 30px auto 0;text-align: center;}
+/*header*/
+.header{height: 155px;}
+.header1{height: 36px;width: 100%;border-bottom:1px solid #eaeaea;}
+.header1 ul{height: 36px;}
+.header1in{width: 1210px;margin: 0 auto;height: 36px;}
+.header1 .headerul1{float: left;}
+.header1 .headerul2{float: right;}
+.header1 ul li{float: left;margin-top: 10px;position: relative;height: 36px;}
+.header1 ul li a{display:block;color: #8c8c8c;padding: 0 12px;line-height: 14px;height: 14px;font-size: 12px;border-right:1px solid #eaeaea;}
+.header1 ul li a.ff4a{color: #dd2726;}
+.header1 ul li a:hover{color: #dd2726;text-decoration: underline;}
+.header1 ul li.MyzhLi{width: 112px;border-left: 1px solid transparent;border-right: 1px solid transparent;}
+.header1 ul li.MyzhLi:hover{border-left: 1px solid #eaeaea;border-right: 1px solid #eaeaea;}
+.header1 ul li .Myzh{display:none;left: -1px;position: absolute;top: 26px;background: #fff;z-index: 12;border: 1px solid #eaeaea;border-bottom: none;}
+.header1 ul li .Myzh dd{height: 26px;width:112px;border-bottom: 1px solid #eaeaea;}
+.header1 ul li .Myzh dd a{display:block;height: 26px;line-height: 26px;padding-left:18px;border: none;}
+.header2{width: 1210px;margin: 30px auto 0;padding-bottom:36px;height: 52px;position: relative;}
+.header_logo{display: block;float: left;width: 166px;height: 49px;margin-left: 23px;margin-top: 5px;}
+.search_header2{float: right;/*2015-5-22 -修改 start*/width: 386px;/*2015-5-22 -修改 end*/}   
+.search_header2 input{font-family: microsoft Yahei;outline: none;width: 370px;height: 38px;color: #a9a9a9;font-size: 13px;padding-left: 13px;border:1px solid #dfdfdf;}
+.search_span_a{/*2015-5-22 -修改 start*/right: 40px;/*2015-5-22 -修改 end*/top: 3px;display: block;position: absolute;/*z-index: 10;*/height: 38px;}
+.search_span_a a{display:block;float: left;font-size: 12px;height: 20px;line-height: 20px;color: #333333;margin: 8px 5px 0 0;text-align: center;padding: 0 6px;}
+.search_span_a a.Nowsearch{background: #dfdfdf;}
+.search_span_a a:hover{background: #dfdfdf;}
+.btnHSearch{position: absolute;/*2015-5-22 -修改 start*/right: 1px;/*2015-5-22 -修改 end*/top:0px;display: block;width: 38px;height: 38px;border:1px solid #dfdfdf;background: #fff;}
+.btnHSearch i{background: url("../../img/front/index/icon_index.png")/*tpa=http://www.ygqq.com/static/zt/red/img/front/index/icon_index.png*/ no-repeat 0 0;display: block;width: 16px;height: 18px;margin: 11px auto;}
+.btnHSearch:hover{background: #dd2726;}
+i.bottom{width:0px;border-right: 4px solid #fff; border-left: 4px solid #fff; border-bottom: 4px solid #888;position: relative;top: -10px;left: 3px;}
+i.top{width:0px;border-right: 4px solid #fff; border-left: 4px solid #fff; border-top: 4px solid #888;position: relative;top: 10px;left: 3px;}
+.btnHSearch:hover i{background-position: -263px -105px;}
+.shoppingCart{width: 126px;height: 40px;position: absolute;right: 0;top: 0;}
+.shoppingCartIn{display:block;width: 102px;height: 40px;background: #ffdb3d;color: #333;font-size: 14px;line-height: 40px;padding-left: 24px;}
+.shoppingCartIn i{display: inline-block;width: 16px;height: 16px;background: url("../../img/front/index/icon_index.png")/*tpa=http://www.ygqq.com/static/zt/red/img/front/index/icon_index.png*/ no-repeat -23px -2px;position: relative;top: 2px;left: 2px;margin-right: 10px;}
+.shoppingCartIn em{font-style: normal;padding-left: 4px;font-size: 13px;}
+.shoppingCartNone:hover .shoppingCartIn{background: #fff;color: #dd2726;border:1px solid #dd2726;height: 38px;line-height: 38px;padding-left: 23px;padding-bottom: 20px;z-index: 2;border-bottom:none;position: absolute;left: 0;top:0;}
+.shoppingCartNone:hover .shoppingCartIn i{background-position: -264px -83px;}
+.shoppingCartNoneCon{font-size: 12px;display:none;position: absolute;top: 58px;right: -1px;z-index: 1;background: #fff;border:1px solid #dd2726;width: 340px;height: 60px;text-align: center;line-height: 60px;}
+.shoppingCartNoneCon a{font-size: 16px;color: #333;}
+.header1in .phoneli img{display: none;margin-top:10px;margin-left:3px;}
+.header1in .phoneli{z-index: 1;height: 26px;border: 1px solid #fff;}
+.header1in .phoneli:hover{height:100px;border:1px solid #eaeaea;border-top: none;}
+/*导航   start*/
+.yNavIndexOut{width: 100%;height:44px;border-bottom: 2px solid #dd2726;}
+.yNavIndex{width: 1210px;margin: 0 auto;height:44px;position: relative;}
+.yNavIndex .yMenuIndex{margin-left: 210px;}
+.yNavIndex .yMenuIndex li a{position: relative;display: inline-block;font-size: 16px;color: #333;line-height: 44px;height: 44px;padding: 0 35px;}
+.yNavIndex .yMenuIndex li a.yMenua{color: #dd2726;}
+.yNavIndex .yMenuIndex li a:hover{color: #dd2726;}
+.yNavIndex .yMenuIndex li{float: left;height: 44px;padding: 0 17px;}
+.pullDown{z-index: 1;position: absolute;left: 0px;top: 0px;}
+.pullDownTitle{height: 46px;width: 210px;background: #dd2726;font-weight: normal;text-align: center;line-height: 46px;}
+.pullDownTitle a{color: #ffffff;font-size: 16px;display: block;}
+
+body .yNavIndexOutfixed{position: fixed;width: 100%;background: #fff;top: 0px;z-index: 999;left: 0;}
+
+.header1in .phoneli img{top: 18px;left: -80px;position: absolute;z-index: 100;width: 155px;height: 155px;border: 1px solid #adadad;}
+.header1in .phoneli:hover{border: 1px solid #fff;}
+
+.search_span_a{position: relative;right: 0px;top: 0px;height: 34px;margin-top: 4px;}
+.search_span_a a{border-right: 1px solid #bbb;padding-right: 10px;height: 14px;line-height: 14px;}
+.search_span_a a:hover{background: none;color: #dd2726;}
+.search_span_a a.Nowsearch {background: none;color: #dd2726;}
+.btnHSearch{background: #dd2726;color: #fff;width: 90px;height: 40px;line-height: 40px;text-align: center;border:0px;}
+.search_header2{position: relative;}
+.search_header2 input{width:347px;padding-left: 29px;}
+.search_header2 s{background: url("../../img/packet/icon_index.png")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/icon_index.png*/ no-repeat 0 0;top: 11px;left: 9px;display: block;width: 16px;height: 18px;position: absolute;}
+
+.yNavIndex .yMenuIndex li a{height: 42px;}
+
+
+
+.header1{background: #f3f3f3;}
+
+.header1 ul li a{color: #555555;}
+.header1 ul li a:hover{color: #555555;text-decoration: none;}
+i.top{border-right: 4px solid transparent;border-left: 4px solid transparent;}
+i.bottom{border-right: 4px solid transparent; border-left: 4px solid transparent;}
+.header1in .phoneli{border: 0px;}
+.header1in .phoneli:hover{border: 0px;}
+.header1 ul.headerul2 li a:hover{color: #dd2726;}
+.header1 ul.headerul2 li dd a{color: #8c8c8c;}
+.header1 ul.headerul2 li dd a:hover{color: #dd2726;}
+.header1 ul li.MyzhLi:hover{border-left: 1px solid transparent;border-right: 1px solid transparent;}
+.header1 ul li a{border-right: 1px solid #b7b7b7;}
+i.i-header-WeChat{width: 0px;position: relative;top: 10px;left: 3px;}
+.hide-menu-nav{position: relative;}
+.hide-menu-nav dl{position: absolute;width: 130px;z-index: 10;background: #fff;left: 0px;top: 44px;border-top: 2px solid #dd2726;border-radius: 2px;display: none;box-shadow: 0px 1px 2px #bbb;}
+.yNavIndex .yMenuIndex li.hide-menu-nav dl dd a{padding: 0px;display: block;text-align: center;font-size: 14px;color: #666;}
+.yNavIndex .yMenuIndex li.hide-menu-nav dl dd a:hover{color: #dd2726;}
+.yNavIndex .yMenuIndex li{padding: 0 10px;}
+.yNavIndex .yMenuIndex li a{padding: 0 22px;}
+.hide-menu-nav span{position: absolute;right: 8px;top: 21px;width: 0px;border-right: 5px solid transparent;border-left: 5px solid transparent;border-top: 6px solid #dd2726;}
+.hide-menu-nav:hover dl{display: block;}
+.header1in .phoneli img{left: -50px;}
+.header1in .phoneli:hover img{display: block;}
+.header1in .phoneli{position: relative;z-index: 2;}
+.header1in .phoneli a{padding-right: 40px;padding-bottom: 10px;}
+.header1 ul li.header-WeChatli i{position: absolute;display:block;width:26px;height: 16px;left: 64px;top: 0px;background: url("../../img/packet/new-icon.png")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/new-icon.png*/ no-repeat -34px 0px;}
+.header1 ul li.header-phoneli a{padding-left: 30px;}
+.header1 ul li.header-phoneli i{position: absolute;display:block;width:10px;height: 17px;left: 12px;top: 0px;background: url("../../img/packet/new-icon.png")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/new-icon.png*/ no-repeat -142px 0px;}
+.header1 ul li.header-WeChatli:hover i{background: url("../../img/packet/new-icon.png")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/new-icon.png*/ no-repeat -84px 0px;}
+i.header-tel{width: 16px;height: 17px;position: absolute;left: 10px;top: 0px;background: url("../../img/packet/new-icon.png")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/new-icon.png*/ no-repeat 0px 0px;}
+.header1in .phoneli img{width: 155px;height: auto;}
+.footer .yFootSupport dl dd a{color: #a0a0a0;}
+.footer .yFootSupport dl{height: auto;}
+.footer_change{width:100%;}
+.footer_change .footer{width:100%;padding-top: 45px;padding-bottom: 0px;}
+.footer_change .footerIn{width: 1210px;margin: 0 auto;}
+.footer_change .footerIn li{padding-left:30px;width: 272px;}
+.footer_change .footerIn li span {float: left;}
+.footer_change .footerIn li p {float: left;margin-left:20px;}
+
+.footer_change  .footer .yFootSupport{width:100%;margin-top: 0px;padding-top:50px;background:#48464a;border:0px;}
+.footer_change  .footer .yFootSupport_in{width:1210px;margin:0 auto;height: 190px;}
+.footer_change .footer .yFootSupport dl{border-right:0px;padding-left: 54px;width:96px;height: 127px;}
+.footer_change .footer .yFootSupport dl dd{line-height:30px;}
+.footer_change .footer .yFootSupport dl dt{color:#d8d8d8;}
+.footer_change .footer .yFootSupport dl dd p{color:#858585;font-size:24px;}
+.footer_change .footer .yFootSupport dl.dlLast{background: url("../../img/packet/foot1.png")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/foot1.png*/ no-repeat;padding-left: 0px;width: 278px;padding-top: 50px;height: 70px;margin-top: 22px;}
+.footer_change .footer .yFootSupport dl.dlLast dd{width: 49px;height: 49px;background: url("../../img/packet/new-icon.png")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/new-icon.png*/ no-repeat;margin-left: 15px;cursor: pointer;position: relative;float: left;}
+
+.footer_change .footer .yFootSupport dl.dlLast dd.dlLast-WeChat{background-position: -128px -33px;}
+.footer_change .footer .yFootSupport dl.dlLast dd.dlLast-WeChat:hover{background-position: -128px -82px;}
+.footer_change .footer .yFootSupport dl.dlLast dd.dlLast-Sina{background-position: -194px -33px;}
+.footer_change .footer .yFootSupport dl.dlLast dd.dlLast-Sina:hover{background-position: -194px -82px;}
+.footer_change .footer .yFootSupport dl.dlLast dd.dlLast-apple{background-position: -65px -33px;}
+.footer_change .footer .yFootSupport dl.dlLast dd.dlLast-apple:hover{background-position: -65px -82px;}
+.footer_change .footer .yFootSupport dl.dlLast dd.dlLast-Android{background-position: 0px -33px;}
+.footer_change .footer .yFootSupport dl.dlLast dd.dlLast-Android:hover{background-position: 0px -82px;}
+
+.yFootBottom{background:#373638;width:100%;height:62px;line-height: 62px;}
+.yFootBottomIn{width:1210px;margin:0 auto;color: #8f8f8f;font-size: 14px;text-align: center;}
+.yFootBottomIn a{color: #8f8f8f;font-size: 14px;margin:0px 15px;}
+.yFootBottomLeft{padding-top:21px;margin: 0 auto;width: 385px;float: left;}
+.yFootBottomRight{color:#8f8f8f;font-size:14px;text-align: center;width: 770px;float: left;}
+.yFootBottomRight a{color:#8f8f8f;}
+.yFootBottomLeft a{display:block;float:left;height:33px;background:url("../../img/packet/icon_footer.png")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/icon_footer.png*/ no-repeat;margin-left:4px;}
+.yFootBottomLeft a:hover{background:url("../../img/packet/icon_footer2.png")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/icon_footer2.png*/ no-repeat;}
+.yFootBottomLeft a.yFootBottomLeft1{width:88px;}
+.yFootBottomLeft a.yFootBottomLeft2{width:92px;background-position:-90px 0px;}
+.yFootBottomLeft a.yFootBottomLeft3{width:99px;background-position:-187px 0px;}
+.yFootBottomLeft a.yFootBottomLeft4{width:90px;background-position:-292px 0px;}
+.footer_change .footer .yFootSupport dl dd a:hover{color:#e6e6e6;}
+#y_modalWeixin{position:fixed;z-index: 1001;top: 0px;display: none;-webkit-transition: top 0.5s linear;-moz-transition: top 0.5s linear;-o-transition: top 0.5s linear;}
+.ymodal-close{position:absolute;right:-60px;top:0px;width:60px;height:60px;background: url("../../img/packet/yungouworld_wxh2.jpg")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/yungouworld_wxh2.jpg*/ no-repeat;}
+.ymodal-close:hover{background: url("../../img/packet/yungouworld_wxh.jpg")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/yungouworld_wxh.jpg*/ no-repeat;}
+.y_modalWeixinBJ{background: rgba(0,0,0,0.2);width: 100%;height: 100%;position: fixed;top: 0px;left: 0px;z-index: 1000;display: none;}
+
+.dlLast dd .y-popover {position: absolute;background-color: #fff;text-align: center;padding: 10px;z-index: 34;left: -56px;bottom: 63px;border-radius: 2px;display: none;}
+.y-popover .y-arrow {background: none;border-top: 10px solid #fff;border-left: 10px solid transparent;border-right: 10px solid transparent;height: 0;left: 70px;line-height: 0;position: absolute;bottom: -10px;width: 0;}
+.dlLast dd .y-popover img {width: 140px;}
+.dlLast a dd:hover .y-popover{display: block;}
+.dlLast a dd .y-popover:hover {display: none;}
+.footer-time-list{height: 72px;line-height: 72px;width: 1210px;margin: 0 auto;border-top: 1px solid #626262;}
+.footer-time-list li{float: left;color: #ffffff;width: 248px;padding-left: 70px;font-size: 24px;margin-left: 40px;}
+
+.footer_change .footer .yFootSupport dl.yFootSupport_in-free{width: 106px; }
+
+.headerul1 li.hreder-hover a{padding-left:26px;background:url("../../img/packet/kf.png")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/kf.png*/ no-repeat 6px -2px /18px;}
+.headerul1 li.hreder-hover:hover a{padding-left:26px;background:url("../../img/packet/kf1.png")/*tpa=http://www.ygqq.com/static/zt/red/img/packet/kf1.png*/ no-repeat 6px -2px /18px;}
+
+
+.footer_change .footer .yFootSupport dl.dl_Time{height:127px;padding-left: 43px;width: 229px;}
+.footer_change .footer .yFootSupport dl.dl_Time dd{color: #f3f3f3;font-size: 20px;font-family: "HelveticaNeueLt","Microsoft YaHei","SimHei";height: 32px;line-height: 32px;padding-left: 31px;margin: 10px auto;}
+.pullDownTitle{
+	background: #c40000;
+}
+.yNavIndex .yMenuIndex{margin-left: 270px;}
+.yNavIndex .yMenuIndex li a{padding: 0 16px;}
+.yNavIndex .yMenuIndex li{padding: 0px;}
+.yNavIndex .yMenuIndex li em{color: #cccccc;font-size: 16px;font-style: normal;}

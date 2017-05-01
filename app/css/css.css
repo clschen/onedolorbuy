@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+a {
+    text-decoration: none;
+    color: #6b6b6b;
+    font-size: 12px;
+}
+
+p {
+    font-size: 12px;
+    color: #6b6b6b;
+}
+
+li {
+    list-style: none;
+}
+
+em {
+    font-style: normal;
+}
+
+img {
+    border: 0;
+}
+
+div {
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+body {
+    font-size: 12px;
+    background: #52affa;
+}
+.w100{
+	width: 100%;
+    background: #f7f7f7;
+}
+.w980 {
+    width: 980px;
+    height: 65px;
+    padding: 15px 0;
+}
+.w980 .logo{
+	float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.w980 .logo .home{
+	display: block;
+    float: left;
+}
+.w980 .logo .line{
+	float: left;
+    margin: 30px 9px 0;
+}
+.w980 .logo .txt{
+	color: #bbb;
+    font-family: "微软雅黑";
+    font-size: 26px;
+    margin-top: 30px;
+    display: block;
+    float: left;
+}
+.w980 .nav{
+	display: inline;
+    float: right;
+    margin-right: 10px;
+    margin-top: 40px;
+}
+.w980 .nav a{
+	color: #666;
+    float: left;
+    font-size: 14px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 5px;
+    text-align: center;
+    width: 100px;
+}
+.w980 .nav .sy{
+	margin-right: 22px;
+}
+.w980 .nav .sj{
+	background: url("/app/images/btnBg.gif") 0 0 no-repeat;
+    display: inline-block;
+    font-weight: bold;
+    height: 25px;
+    text-align: center;
+    width: 100px;
+}
+.coent{
+	height: 800px;
+	width:100%;
+	background: url("/app/images/bannerr.jpg") 450px 50px no-repeat;
+}
+.coent .app h4{
+	font-size: 24px;
+	color: #fff;
+}
+.coent{
+	position: relative;
+}
+.coent .app{
+	right: 450px;
+    position: absolute;
+    top: 100px;
+}
+.coent .app h3{
+	font-size: 30px;
+	color: #fff;
+}
+.coent .appxz{
+	background: url("/app/images/qr-bg.png") 0 0 no-repeat;
+	width: 258px;
+	height: 378px;
+	float: left;
+}
+.coent .appxz .appimg{
+	background: url("/statics/templates/yungou/images/code.jpg") 6px 6px no-repeat;
+	background-size: 134px auto;
+	border: 1px solid #eee;
+    height: 138px;
+    margin: 30px auto 0;
+    width: 138px;
+    padding: 4px;
+}
+.coent .appxz p{
+	color: #999;
+    font-family: "微软雅黑";
+    line-height: 20px;
+    padding-top: 5px;
+    text-align: center;
+}
+.coent .appxz span{
+	display: block;
+    font-size: 14px;
+}
+.coent .appxz .app_xz{
+	padding-top: 25px;
+}
+.coent .appxz .app_xz p{
+	padding-bottom: 15px;
+}
+.coent .appxz .app_xz p a{
+	background: url("/app/images/download_03.gif") 0 0 no-repeat;
+	display: block;
+    height: 36px;
+    margin: 0 auto;
+    width: 179px;
+}
+.coent .appxz .app_xz span a{
+	background: url("/app/images/download_06.gif") 0 0 no-repeat;
+	display: block;
+    height: 36px;
+    margin: 0 auto;
+    width: 179px;
+}

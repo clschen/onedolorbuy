@@ -1,0 +1,1 @@
+<?php return array('code'=>'www.yungou.com'); ?>

@@ -1,0 +1,49 @@
+{wc:templates "index","header"}
+<div class="login_layout">    
+	<div class="login_title">
+		<h2>邮箱验证已过期</h2>
+	</div>
+	<div class="login_Content">		
+		<div id="divNormal" class="login_CMobile_Complete">
+			<p style="padding-left:200px; color:#f00;">邮箱验证码已过期</p>
+			<a id="hylinkMails" class="login_Email_but" href="{WEB_PATH}/member/finduser/findsendemail/{wc:$key}" target="_blank">重新发送邮件</a>
+		</div>	
+	</div>
+</div>
+<script type="text/javascript">
+	$(".yu_ff").mouseover(function(){
+	  $(".h_1yyg_eject").show();
+	})
+	$(".yu_ff").mouseout(function(){
+	  $(".h_1yyg_eject").hide();
+	})
+
+		     $("#m_all_sort").hide();
+	     $(".m_menu_all").mouseenter(function(){
+			    $(".m_all_sort").show();
+	     })
+		 $(".m_menu_all").mouseleave(function(){
+			    $(".m_all_sort").hide();
+	     })
+		 $(".m_all_sort").mouseenter(function(){
+			    $(this).show();
+	     })
+		 $(".m_all_sort").mouseleave(function(){
+			    $(this).hide();
+	     })
+	     $(function(){
+	       $(window).scroll(function() {	
+	      		
+	     		if($(window).scrollTop()>=130&&$(window).scrollTop()<=560){
+	     			$(".head_nav").addClass("fixedNav");	
+	     			$("#m_all_sort").fadeOut();
+	     		}else if($(window).scrollTop()>560){
+	     			$(".head_nav").addClass("fixedNav");
+	     			$("#m_all_sort").fadeOut();
+	     	} else if($(window).scrollTop()<130){
+	     			$(".head_nav").removeClass("fixedNav");
+	     	}
+	           });
+	     });
+</script>
+{wc:templates "index","footer"}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
+    <title>提现记录 - {wc:$webname}触屏版</title>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link href="{G_TEMPLATES_CSS}/mobile/comm.css" rel="stylesheet" type="text/css" />
+    <link href="{G_TEMPLATES_CSS}/mobile/member.css" rel="stylesheet" type="text/css" />
+    <link href="{G_TEMPLATES_CSS}/mobile/invite.css" rel="stylesheet" type="text/css" />
+    <script src="{G_TEMPLATES_JS}/mobile/jquery190.js" language="javascript" type="text/javascript"></script>
+</head>
+<body>
+<div class="h5-1yyg-v11">
+    
+<!-- 栏目页面顶部 -->
+
+
+<!-- 内页顶部 -->
+
+    <!-- 栏目页面顶部 -->
+<header class="header" style="position: fixed;width: 100%;z-index: 99999999;">
+
+    <h1 style="width: 100%;text-align: center;float: none;top: 0px;left: 0px;font-size: 25px;" class="fl">
+        <span style="display: block;height: 49px;line-height: 49px;">
+            <a style="font-size: 20px;line-height: 49px;" href="{WEB_PATH}/mobile/mobile">
+                提现记录
+            </a>
+        </span>
+
+        <!--<img src="{G_UPLOAD_PATH}/{wc:fun:Getlogo()}"/>
+        -->
+        <!--<img src="/statics/templates/yungou/images/sjlogo.png"/>
+        -->
+    </h1>
+
+    <a id="fanhui" class="cefenlei" onclick="history.go(-1)" href="javascript:;">
+        
+        <img width="30" height="30" src="/statics/templates/yungou/images/mobile/fanhui.png">
+    </a>
+
+    <div class="fr head-r" style="position: absolute;right: 6px;top: 10px;">
+
+        <!--<a href="{WEB_PATH}/mobile/user/login" class="z-Member"></a>
+    -->
+    <a href="{WEB_PATH}/mobile/mobile" class="z-shop" style="background-position: 2px -73px;"></a>
+
+</div>
+
+</header>
+
+<!-- 栏目导航 -->
+
+
+    <section class="clearfix g-member" style="padding-top: 60px;">
+        <div class="clearfix m-round m-name">
+            <div class="fl f-Himg" style="padding-top: 5px;">
+                <a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$member['uid']}" class="z-Himg">
+                    {wc:php:start}
+                    $touxiang = get_user_key($member['uid'],'img')
+                {wc:php:end}
+                    <img style="border-radius: 110px;" src="
+                    {wc:if $touxiang !='photo/member.jpg'}
+                        {G_UPLOAD_PATH}/{wc:$touxiang}
+                    {wc:elseif $member['headimg'] !=''}
+                        {wc:$member['headimg']}
+                    {wc:else}
+                        {G_UPLOAD_PATH}/{wc:$touxiang}
+                    {wc:if:end}" border=0>
+                </a>
+                <span class="{wc:if $member['jingyan'] < 501}
+                    z-class-icon01
+                {wc:elseif $member['jingyan'] < 1001}
+                    z-class-icon02
+                {wc:elseif $member['jingyan'] < 3001}
+                    z-class-icon03
+                {wc:elseif $member['jingyan'] < 6001}
+                    z-class-icon04
+                {wc:elseif $member['jingyan'] < 2001}
+                    z-class-icon05
+                {wc:else}
+                    z-class-icon06
+                {wc:if:end} gray02">
+                    <s></s>
+                    {wc:if $member['jingyan'] < 501} 
+                        云购新手
+                    {wc:elseif $member['jingyan'] < 1001}
+                        云购小将
+                    {wc:elseif $member['jingyan'] < 3001}
+                        云购中将
+                    {wc:elseif $member['jingyan'] < 6001}
+                        云购上将
+                    {wc:elseif $member['jingyan'] < 20001}
+                        云购大将
+                    {wc:else}
+                        云购将军
+                    {wc:if:end}
+                </span>
+            </div>
+            <div class="m-name-info">
+                <p class="u-name"> 
+                <b class="z-name gray01">
+                {wc:fun:get_user_name($member['uid'])}
+                </b>
+                    {wc:if $member['mobile']} 
+                    <em>
+                    ({wc:$member['mobile']})
+                    </em>
+                    {wc:else} 
+                    <em>
+                    <a href="{WEB_PATH}/mobile/user/mobile" class="fr z-Recharge-btn" style="line-height:24px; margin-right:5px; margin-top:3px;">
+                    绑定手机
+                    </a>
+                    </em> 
+                    {wc:if:end}
+                    {wc:if $member['username']}
+                    <em></em>
+                    {wc:else} 
+                    <em>
+                    <a href="{WEB_PATH}/mobile/user/profile" class="fr z-Recharge-btn" style="line-height:24px; margin-right:5px; margin-top:3px;">
+                    绑定昵称
+                    </a>
+                    </em> 
+                    {wc:if:end}
+                    
+                </p>
+                <ul class="clearfix u-mbr-info">
+                    <li>
+                        可用积分
+                        <span class="orange">{wc:$member['score']}</span>
+                    </li>
+                    <li>
+                        经验值
+                        <span class="orange">{wc:$member['jingyan']}</span>
+                    </li>
+                    <li>
+                        可用余额
+                        <span class="orange">￥{wc:$member['money']}</span>
+                        <a href="{WEB_PATH}/mobile/home/userrecharge" class="fr z-Recharge-btn">去充值</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="R-content">
+            <div class="member-t"><h2>提现记录</h2></div>
+            <div id="divMentionList" class="list-tab cash gray02">
+                <ul class="listTitle"><li class="w20">时间</li><li class="w35">账户信息</li><li class="w15">金额</li><li class="w15">手续费</li><li class="w15">状态</li></ul>
+                {wc:if $recount==1}
+                {wc:loop $recordarr $val}
+                <ul><li class="w20">{wc:fun:date('m-d',$val['time'])}&nbsp;</li><li class="w35">{wc:$val['banknumber']}</li><li class="w15">&nbsp;{wc:$val['money']}</li><li class="w15">&nbsp;{wc:$fufen['fufen_yongjintx']}</li><li class="w15">&nbsp;{wc:if $val['auditstatus']==1}通过{wc:else}未通过{wc:if:end}</li><ul>
+                    {wc:loop:end}
+                    {wc:else}
+                    <div class="tips-con"><i></i>未有相应提现记录</div>
+                    {wc:if:end}
+            </div>
+            <div id="divPageNav" class="page_nav"></div>
+        </div>
+    </section>
+    
+{wc:templates "mobile/index","footer"}
+<script language="javascript" type="text/javascript">
+  var Path = new Object();
+  Path.Skin="{G_TEMPLATES_STYLE}";  
+  Path.Webpath = "{WEB_PATH}";
+  
+var Base={head:document.getElementsByTagName("head")[0]||document.documentElement,Myload:function(B,A){this.done=false;B.onload=B.onreadystatechange=function(){if(!this.done&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){this.done=true;A();B.onload=B.onreadystatechange=null;if(this.head&&B.parentNode){this.head.removeChild(B)}}}},getScript:function(A,C){var B=function(){};if(C!=undefined){B=C}var D=document.createElement("script");D.setAttribute("language","javascript");D.setAttribute("type","text/javascript");D.setAttribute("src",A);this.head.appendChild(D);this.Myload(D,B)},getStyle:function(A,B){var B=function(){};if(callBack!=undefined){B=callBack}var C=document.createElement("link");C.setAttribute("type","text/css");C.setAttribute("rel","stylesheet");C.setAttribute("href",A);this.head.appendChild(C);this.Myload(C,B)}}
+function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}
+Base.getScript('{G_TEMPLATES_JS}/mobile/Bottom.js');
+</script>
+ 
+</div>
+</body>
+</html>

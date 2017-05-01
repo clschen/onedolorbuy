@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>晒单 - {wc:$webname}触屏版</title>
+<meta content="app-id=518966501" name="apple-itunes-app" />     
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
+<meta content="yes" name="apple-mobile-web-app-capable" />     
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />     
+<meta content="telephone=no" name="format-detection" />
+<script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery.min.js"></script>
+<script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery.uploadifive.min.js"></script>
+<link href="{G_TEMPLATES_CSS}/mobile/comm.css?" rel="stylesheet" type="text/css" />
+<link href="{G_TEMPLATES_CSS}/mobile/single.css?" rel="stylesheet" type="text/css" />
+<link href="{G_TEMPLATES_CSS}/mobile/shaidan.css?" rel="stylesheet" type="text/css" />
+{wc:templates "mobile/index","header"}
+<body>
+<div class="h5-1yyg-v1" style="padding:10px;">
+<div class="R-content">
+	<form  action="{WEB_PATH}/mobile/home/postsingle" method="post">
+		<input type="hidden" name="shopid" value="{wc:$shopid}"/>
+		<div class="sd_lilie">
+			<span class="sd_span">标题：</span>
+			<input id="sd_text" type="text" name="title" />
+		</div>
+		<div class="sd_lilie">
+			<span class="sd_span">内容：</span>
+			<textarea id="sd_textarea" name="content" ></textarea>
+		</div>
+		<div class="sd_lilie">
+			<span class="sd_span">晒图：</span>
+			<input type="hidden" id="file_up" name="file_up" value="">
+			<div id="queue"></div>
+			<div style="margin:0 auto; width:90%;">
+				
+				<input id="file_upload" name="file_upload" type="file" multiple="true">
+				<a style="position: relative; width:50px;padding-left:10px;padding-right:10px;padding-top:6px;padding-bottom:6px;" class="uploadifive-button" href="javascript:$('#file_upload').uploadifive('upload')">开始上传</a>
+			<div style="clear:both"></div>
+			</div>
+		</div>
+		<input id="sd_submit" name="submit" type="submit" value="确认添加" />
+		
+	</form>
+
+	<script type="text/javascript">
+		$(function() {
+			
+			$('#file_upload').uploadifive({
+				'auto':false,
+				'checkScript' : '{WEB_PATH}/mobile/home/check_exists',
+				'queueID':'queue',
+				'uploadScript':'{WEB_PATH}/mobile/home/mupload',
+				'onUploadComplete' : function(file, data) {
+					valu(data);
+				}
+			});
+		});
+
+		j = '';
+		function valu(data){
+			var i = '';
+			if(data !=''){
+				i = data+';';
+			}
+			j += i;
+			$("#file_up").val(j);
+		}
+		
+		// n =new array();
+		// $('#queue').on("click","div", function() {
+		// 	var m = $(this).index();
+		// 	n.push(m);
+		// 	alert(n[1]);
+		//  });
+		 
+		
+	</script>
+</div>
+
+</div>
+<!-- {wc:templates "mobile/index","footer"} -->
+</body>
+</html>

@@ -1,0 +1,89 @@
+<?php defined('G_IN_SYSTEM')or exit('No permission resources.'); ?><style>
+	.header {
+    height: 49px;
+    background: #22AAFF;
+    border-bottom: 1px solid #e35b00;
+}
+
+.header h1 {
+    height: 49px;
+    display: inline;
+    background: url();
+    background-size: 55px auto;
+}
+
+.header h1 a {
+    color: #fff;
+    display: inline;
+}
+
+.header h1 a img {
+    width: 114px;
+    height: 30px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.header span {
+    display: none;
+}
+
+.header .u-slogan {
+    width: 86px;
+    height: 13px;
+    margin: 27px 0 0 9px;
+    /*background:url(../../images/1yyg-slogan.png);*/
+    background-size: 86px auto;
+}
+
+.header .head-r {
+    /*margin: 11px 6px 0 0;*/
+    float: none;
+}
+
+.header .cefenlei {
+    background: url(../../images/123456.png) center center no-repeat;
+    display: block;
+    height: 30px;
+    overflow: hidden;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    width: 30px;
+    background-size: 20px auto;
+}
+</style>
+
+<header class="header" style="position: fixed;width: 100%;z-index: 99999999;">
+
+    <h1 style="width: 100%;text-align: center;float: none;top: 0px;left: 0px;font-size: 25px;" class="fl">
+        <span style="display: block;height: 49px;line-height: 49px;">
+            <a style="font-size: 20px;line-height: 49px;" href="<?php echo WEB_PATH; ?>">
+               <?php if($item['q_end_time']!=''): ?>
+                揭晓结果
+                <?php  else: ?>
+                商品详情
+                <?php endif; ?>
+            </a>
+        </span>
+
+        <!--<img src="<?php echo G_UPLOAD_PATH; ?>/<?php echo Getlogo(); ?>"/>
+        -->
+        <!--<img src="/statics/templates/yungou/images/sjlogo.png"/>
+        -->
+    </h1>
+
+    <a id="fanhui" class="cefenlei" onclick="history.go(-1)" href="javascript:;">
+        
+        <img width="30" height="30" src="/statics/templates/yungou/images/mobile/fanhui.png">
+    </a>
+
+    <div class="fr head-r" style="position: absolute;right: 6px;top: 10px;">
+
+        <!--<a href="<?php echo WEB_PATH; ?>/mobile/user/login" class="z-Member"></a>
+    -->
+    <a href="<?php echo WEB_PATH; ?>/mobile/mobile" class="z-shop" style="background-position: 2px -75px;"></a>
+
+</div>
+
+</header>

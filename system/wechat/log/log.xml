@@ -1,0 +1,199 @@
+19:51:55 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAis4NL2TMGV9hDdcFkmKuLJOY]]></FromUserName>
+<CreateTime>1458993109</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://m.689aigou.com/]]></EventKey>
+<MenuId>404030722</MenuId>
+</xml>
+19:52:01 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAis4NL2TMGV9hDdcFkmKuLJOY]]></FromUserName>
+<CreateTime>1458993114</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>37.624527</Latitude>
+<Longitude>120.577797</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+06:49:16 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAis4NL2TMGV9hDdcFkmKuLJOY]]></FromUserName>
+<CreateTime>1459032550</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[qiandao]]></EventKey>
+</xml>
+10:41:10 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAiswgu5u2TJuO09_Z9h1Fb-4Y]]></FromUserName>
+<CreateTime>1459046463</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>37.646687</Latitude>
+<Longitude>120.532539</Longitude>
+<Precision>150.000000</Precision>
+</xml>
+10:41:13 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAiswgu5u2TJuO09_Z9h1Fb-4Y]]></FromUserName>
+<CreateTime>1459046466</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[qiandao]]></EventKey>
+</xml>
+17:18:41 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAiswgu5u2TJuO09_Z9h1Fb-4Y]]></FromUserName>
+<CreateTime>1459070314</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>37.656399</Latitude>
+<Longitude>120.507523</Longitude>
+<Precision>150.000000</Precision>
+</xml>
+17:18:53 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAiswgu5u2TJuO09_Z9h1Fb-4Y]]></FromUserName>
+<CreateTime>1459070326</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[早晨几点开门]]></Content>
+<MsgId>6266659333138207615</MsgId>
+</xml>
+17:19:05 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAiswgu5u2TJuO09_Z9h1Fb-4Y]]></FromUserName>
+<CreateTime>1459070339</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>37.656399</Latitude>
+<Longitude>120.507523</Longitude>
+<Precision>150.000000</Precision>
+</xml>
+17:44:09 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAis7E80nCvAtpZcjStTGzcNPU]]></FromUserName>
+<CreateTime>1459071842</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>37.647850</Latitude>
+<Longitude>120.498230</Longitude>
+<Precision>40.000000</Precision>
+</xml>
+17:44:54 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAis7E80nCvAtpZcjStTGzcNPU]]></FromUserName>
+<CreateTime>1459071887</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>37.647850</Latitude>
+<Longitude>120.498230</Longitude>
+<Precision>40.000000</Precision>
+</xml>
+17:45:48 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAis7E80nCvAtpZcjStTGzcNPU]]></FromUserName>
+<CreateTime>1459071942</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>37.647858</Latitude>
+<Longitude>120.498222</Longitude>
+<Precision>40.000000</Precision>
+</xml>
+17:46:14 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAis7E80nCvAtpZcjStTGzcNPU]]></FromUserName>
+<CreateTime>1459071967</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>37.647858</Latitude>
+<Longitude>120.498222</Longitude>
+<Precision>40.000000</Precision>
+</xml>
+17:46:38 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAis7E80nCvAtpZcjStTGzcNPU]]></FromUserName>
+<CreateTime>1459071991</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>37.647865</Latitude>
+<Longitude>120.498169</Longitude>
+<Precision>40.000000</Precision>
+</xml>
+19:34:17 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAiswgu5u2TJuO09_Z9h1Fb-4Y]]></FromUserName>
+<CreateTime>1459078450</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>37.656143</Latitude>
+<Longitude>120.507759</Longitude>
+<Precision>150.000000</Precision>
+</xml>
+19:35:06 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAiswgu5u2TJuO09_Z9h1Fb-4Y]]></FromUserName>
+<CreateTime>1459078500</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>37.656143</Latitude>
+<Longitude>120.507759</Longitude>
+<Precision>150.000000</Precision>
+</xml>
+19:35:19 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAiswgu5u2TJuO09_Z9h1Fb-4Y]]></FromUserName>
+<CreateTime>1459078512</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://m.689aigou.com/index.php/mobile/user/login]]></EventKey>
+<MenuId>404030722</MenuId>
+</xml>
+19:35:38 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAiswgu5u2TJuO09_Z9h1Fb-4Y]]></FromUserName>
+<CreateTime>1459078531</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>37.656574</Latitude>
+<Longitude>120.507797</Longitude>
+<Precision>150.000000</Precision>
+</xml>
+20:28:30 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAis7kf2rpaVKJzHBHck_0xNjk]]></FromUserName>
+<CreateTime>1459081703</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>29.500397</Latitude>
+<Longitude>106.503899</Longitude>
+<Precision>65.000000</Precision>
+</xml>
+20:38:20 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAis-EDkZ8tci4lXQmLCb5J9_M]]></FromUserName>
+<CreateTime>1459082293</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+22:44:40 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAis-EDkZ8tci4lXQmLCb5J9_M]]></FromUserName>
+<CreateTime>1459089872</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>23.478493</Latitude>
+<Longitude>115.694572</Longitude>
+<Precision>65.000000</Precision>
+</xml>
+22:45:05 R
+<xml><ToUserName><![CDATA[gh_0329d970318e]]></ToUserName>
+<FromUserName><![CDATA[o5VAis-EDkZ8tci4lXQmLCb5J9_M]]></FromUserName>
+<CreateTime>1459089898</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://m.689aigou.com/index.php/mobile/mobile/item/266]]></EventKey>
+<MenuId>404030722</MenuId>
+</xml>

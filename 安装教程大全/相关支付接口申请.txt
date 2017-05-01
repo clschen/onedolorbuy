@@ -1,0 +1,13 @@
+
+支付宝要申请即时的接口
+https://b.alipay.com/order/productDetail.htm?productId=2012111200373124
+https://b.alipay.com/order/productDetail.htm?productId=2014110308142133
+财付通申请
+http://mch.tenpay.com/
+网银在线：
+http://www.chinabank.com.cn/
+微信支付
+https://mp.weixin.qq.com
+短信宝地址：http://www.smsbao.com/
+QQ免费域名邮箱地址：http://exmail.qq.com/onlinesell/intro
+云支付地址：http://jm.i2e.cn/

@@ -1,0 +1,6 @@
+
+
+QQ登录的回调地址是：
+http://域名/index.php/api/qqlogin/callback/
+例如：
+http://www.gouagou.com/index.php/api/qqlogin/callback/
